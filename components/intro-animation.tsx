@@ -25,7 +25,7 @@ export const HERO_REVEAL_MS = CURTAIN_DELAY + CURTAIN_DURATION - 150
 
 type Phase = "idle" | "in" | "out" | "done"
 
-export function IntroAnimation({ onDone }: { onDone: () => void }) {
+export function IntroAnimation({ onDone }: { onDone?: () => void } = {}) {
   const { isAr } = useLanguage()
   const [phase, setPhase] = useState<Phase>("idle")
   const [curtainUp, setCurtainUp] = useState(false)
@@ -37,7 +37,7 @@ export function IntroAnimation({ onDone }: { onDone: () => void }) {
     const t0 = setTimeout(() => setPhase("in"), 80)
     const t1 = setTimeout(() => setPhase("out"), LETTERS_IN_TOTAL)
     const t2 = setTimeout(() => setCurtainUp(true), CURTAIN_DELAY)
-    const t3 = setTimeout(() => onDone(), HERO_REVEAL_MS)
+    const t3 = setTimeout(() => onDone?.(), HERO_REVEAL_MS)
     const t4 = setTimeout(() => setPhase("done"), ANIM_TOTAL)
 
     return () => { clearTimeout(t0); clearTimeout(t1); clearTimeout(t2); clearTimeout(t3); clearTimeout(t4) }

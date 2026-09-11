@@ -62,7 +62,7 @@ export function HomeHero() {
   ]
 
   return (
-    <section className="relative min-h-[90vh] flex flex-col justify-between pt-24 pb-12 sm:pt-28 sm:pb-14 md:pt-32 md:pb-16 bg-[#000823] text-white overflow-hidden border-b border-white/[0.08] w-full max-w-full">
+    <section className="relative min-h-[88vh] flex flex-col justify-between pt-20 pb-10 sm:pt-24 sm:pb-10 md:pt-28 md:pb-12 bg-[#000823] text-white overflow-hidden border-b border-white/[0.08] w-full max-w-full">
       {/* ── Refined Luxury Architectural Atmosphere (No Cartesian Grids) ── */}
       <div
         className="absolute inset-0 pointer-events-none opacity-40"
@@ -73,7 +73,7 @@ export function HomeHero() {
       />
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20 w-full min-w-0">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center min-w-0">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center min-w-0">
           
           {/* ── Left Column: Authoritative Institutional Holding Narrative ── */}
           <div className="lg:col-span-7 min-w-0">
@@ -299,7 +299,7 @@ export function HomeHero() {
       </div>
 
       {/* ── Bottom Institutional Foundation Strip ───────────────────────── */}
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20 w-full mt-12 sm:mt-16 pt-8 border-t border-white/[0.10]">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20 w-full mt-6 sm:mt-8 pt-5 sm:pt-6 border-t border-white/[0.10]">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {HOLDING_PILLARS.map((p, idx) => (
             <div key={idx} className="flex flex-col min-w-0">

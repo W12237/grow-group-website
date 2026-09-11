@@ -1,0 +1,47 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 6 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> >>
+endobj
+6 0 obj
+<< /Length 1135 >>
+stream
+BT
+/F2 10 Tf 50 745 Td (GROWL HOLDING COMPANY  |  EXECUTIVE BRIEF 2026) Tj
+0 -15 Td (CONFIDENTIAL - FOR ENTERPRISE & INVESTOR PARTNERS) Tj
+ET BT /F2 20 Tf 50 700 Td (GROWL CO. - CAPABILITIES & TECHNICAL DECK) Tj
+ET BT /F1 12 Tf 50 666 Td (Enterprise Technical Architecture, Multi-Agent Systems & Integration Blueprints) Tj
+ET BT /F1 10 Tf 50 644 Td (-------------------------------------------------------------------------------------------------------------------) Tj
+ET BT /F2 13 Tf 50 625 Td (CORE TECHNICAL CAPABILITIES) Tj
+ET BT /F1 10 Tf 50 602 Td (- Distributed Systems: Next.js, Node.js, Python FastAPI, Go, PostgreSQL, Redis, Apache Kafka.) Tj
+ET BT /F1 10 Tf 50 583 Td (- Autonomous Intelligence: Multi-agent orchestration, LangGraph, vector search, Claude & GPT-4o.) Tj
+ET BT /F1 10 Tf 50 564 Td (- Integration Layer: SAP, Oracle, Salesforce, Microsoft Dynamics, Stripe, unified webhooks.) Tj
+ET BT /F1 10 Tf 50 545 Td (- Security & Hardening: Cloudflare Enterprise, AWS GuardDuty, Kubernetes network policies.) Tj
+ET BT /F1 9 Tf 50 40 Td (Page 1 of 1  -  Growl Holding Co.  -  https://growl.co  -  partners@growl.co) Tj ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000185 00000 n 
+0000000260 00000 n 
+0000000396 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+1583
+%%EOF

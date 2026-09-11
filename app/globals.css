@@ -1,0 +1,385 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   GROWL CO. — DESIGN SYSTEM
+   Master brand + 5 specialized sector accent color system
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Master brand ──────────────────────────────────────────────────────── */
+  --growl-white-tech: #f8f8f8;
+  --growl-nightshade: #000823;
+  --growl-purple-glow: #7135E5;
+  --growl-purple-medium: #B1A5F9;
+  --growl-border: rgba(0, 8, 35, 0.08);
+  --growl-border-strong: rgba(0, 8, 35, 0.15);
+  --growl-muted: rgba(0, 8, 35, 0.50);
+  --growl-subtle: rgba(0, 8, 35, 0.04);
+
+  /* ── 5 Sector accent colors & tints (Growl Identity Guide) ───────── */
+  --division-holding: #000823;
+  --division-marketing: #E5389A;      /* Magenta Pulse */
+  --division-marketing-tint: #F1A7D1;
+  --division-technology: #FF7A00;     /* Strong Orange */
+  --division-technology-tint: #FCCA9C;
+  --division-ai: #0FCFC0;             /* Aqua Core */
+  --division-ai-tint: #A2F6EF;
+  --division-cybersecurity: #DA291C;  /* Fortinet Red */
+  --division-cybersecurity-tint: #F1ACA7;
+  --division-hub: #1F6FEB;            /* Signal Blue */
+  --division-hub-tint: #A3C3F5;
+
+  /* ── Active division (overridden per page) ─────────────────────────── */
+  --division-accent: var(--division-holding);
+  --division-accent-tint: rgba(0, 8, 35, 0.2);
+
+  /* ── Theme tokens ──────────────────────────────────────────────────── */
+  --background: var(--growl-white-tech);
+  --foreground: var(--growl-nightshade);
+  --card: #ffffff;
+  --card-foreground: var(--growl-nightshade);
+  --popover: #ffffff;
+  --popover-foreground: var(--growl-nightshade);
+  --primary: var(--growl-nightshade);
+  --primary-foreground: var(--growl-white-tech);
+  --secondary: #f1f0ee;
+  --secondary-foreground: var(--growl-nightshade);
+  --muted: #f1f0ee;
+  --muted-foreground: #606470;
+  --accent: var(--division-accent);
+  --accent-foreground: var(--growl-white-tech);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: var(--growl-border);
+  --input: var(--growl-border);
+  --ring: var(--division-accent);
+  --radius: 0.625rem;
+
+  /* ── Sidebar (kept for shadcn compat) ──────────────────────────────── */
+  --sidebar: #ffffff;
+  --sidebar-foreground: var(--growl-nightshade);
+  --sidebar-primary: var(--growl-nightshade);
+  --sidebar-primary-foreground: var(--growl-white-tech);
+  --sidebar-accent: #f5f4f0;
+  --sidebar-accent-foreground: var(--growl-nightshade);
+  --sidebar-border: var(--growl-border);
+  --sidebar-ring: var(--growl-nightshade);
+}
+
+/* ── Dark mode (not actively used, but available) ────────────────────── */
+.dark {
+  --background: var(--growl-nightshade);
+  --foreground: var(--growl-white-tech);
+  --card: #060e2b;
+  --card-foreground: var(--growl-white-tech);
+  --popover: #060e2b;
+  --popover-foreground: var(--growl-white-tech);
+  --primary: var(--growl-white-tech);
+  --primary-foreground: var(--growl-nightshade);
+  --secondary: #0d163a;
+  --secondary-foreground: var(--growl-white-tech);
+  --muted: #0d163a;
+  --muted-foreground: #a3a8b8;
+  --accent: var(--division-accent);
+  --accent-foreground: var(--growl-white-tech);
+  --border: rgba(248, 248, 248, 0.1);
+  --input: rgba(248, 248, 248, 0.1);
+  --ring: var(--division-accent);
+  --sidebar: #060e2b;
+  --sidebar-foreground: var(--growl-white-tech);
+  --sidebar-primary: var(--growl-white-tech);
+  --sidebar-primary-foreground: var(--growl-nightshade);
+  --sidebar-accent: #0d163a;
+  --sidebar-accent-foreground: var(--growl-white-tech);
+  --sidebar-border: rgba(248, 248, 248, 0.1);
+  --sidebar-ring: var(--growl-white-tech);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   TAILWIND THEME INLINE
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@theme inline {
+  --font-sans: var(--font-instrument-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: 'Geist Mono', monospace;
+  --font-pixel: var(--font-courier-prime), 'Courier Prime', monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   BASE STYLES
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-instrument-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   SMOOTH SCROLLING
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   ANIMATIONS
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Reveal up — blur + translateY */
+@keyframes reveal-up {
+  0% {
+    opacity: 0;
+    filter: blur(12px);
+    transform: translateY(24px);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0px);
+  }
+}
+
+.animate-reveal-up {
+  animation: reveal-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Fade in */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease forwards;
+}
+
+/* Fade up for sections */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Marquee — left */
+@keyframes marquee-left {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Marquee — right */
+@keyframes marquee-right {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-marquee-left {
+  animation: marquee-left 40s linear infinite;
+}
+
+.animate-marquee-right {
+  animation: marquee-right 40s linear infinite;
+}
+
+/* Pulse dot */
+@keyframes pulse-dot {
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.4;
+    transform: scale(0.8);
+  }
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+/* Line draw */
+@keyframes line-draw {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+/* Shimmer on hover */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+/* Hero word reveal — staggered */
+@keyframes word-reveal {
+  0% {
+    opacity: 0;
+    filter: blur(24px);
+    transform: translateY(24px);
+  }
+
+  60% {
+    filter: blur(3px);
+    opacity: 0.85;
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0px);
+  }
+}
+
+.word-reveal {
+  opacity: 0;
+  animation: word-reveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+}
+
+/* Float subtle */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   REDUCED MOTION
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .animate-marquee-left,
+  .animate-marquee-right {
+    animation: none !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   SELECTION
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+::selection {
+  background: rgba(0, 8, 35, 0.12);
+  color: var(--growl-nightshade);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   SCROLLBAR
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 8, 35, 0.15);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 8, 35, 0.25);
+}

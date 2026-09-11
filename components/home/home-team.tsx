@@ -46,16 +46,6 @@ const TEAM_MEMBERS: TeamMember[] = [
     image: "/team/mohamed-alaa.webp",
     accentColor: "#0FCFC0", // AI Aqua
   },
-  {
-    name: "Menna Hossam",
-    nameAr: "منة حسام",
-    role: "Director of Operations",
-    roleAr: "مديرة إدارة العمليات والبرامج",
-    bio: "Orchestrating cross-sector program delivery, project timelines, quality assurance, and unified client communication.",
-    bioAr: "تنسيق تسليم البرامج المشتركة عبر القطاعات، ضبط الجداول الزمنية، ومعايير ضمان الجودة والتواصل الموحد.",
-    image: "/team/menna-hossam.webp",
-    accentColor: "#E5389A", // Marketing Magenta
-  },
 ]
 
 export function HomeTeam() {
@@ -81,8 +71,8 @@ export function HomeTeam() {
           </p>
         </div>
 
-        {/* ── Team Grid: 4 Desktop, 2 Tablet, 1 Mobile ──────────────────── */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        {/* ── Team Grid: 3 Executive Leaders ──────────────────────────────── */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {TEAM_MEMBERS.map((member) => (
             <div
               key={member.name}

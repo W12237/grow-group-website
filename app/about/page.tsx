@@ -49,11 +49,11 @@ const PRINCIPLES = [
 ]
 
 const DIVISIONS_LIST = [
-  { name: "Growl Marketing & Branding", nameAr: "جرول للتسويق وبناء العلامات", accent: "#E5389A", href: "/sectors/marketing", tag: "Brands That Earn Attention" },
+  { name: "Growl SaaS", nameAr: "جرول للبرمجيات كخدمة", accent: "#FBE858", href: "/sectors/saas", tag: "The System Without the Project" },
   { name: "Growl Tech", nameAr: "جرول للتقنية وهندسة البرمجيات", accent: "#FF7A00", href: "/sectors/tech", tag: "Software That Runs the Business" },
-  { name: "Growl AI", nameAr: "جرول للذكاء الاصطناعي والأتمتة", accent: "#0FCFC0", href: "/sectors/ai", tag: "Automation Sold as a Product" },
+  { name: "Growl Hub", nameAr: "منصة جرول هب للأنظمة السحابية", accent: "#1F6FEB", href: "/sectors/hub", tag: "The Connected Operating Suite" },
   { name: "Growl System Integrator & Cybersecurity", nameAr: "جرول لتكامل الأنظمة والأمن السيبراني", accent: "#DA291C", href: "/sectors/system-integrator-cybersecurity", tag: "The Infrastructure Behind the Business" },
-  { name: "Growl Hub", nameAr: "منصة جرول هب للأنظمة السحابية", accent: "#1F6FEB", href: "/sectors/hub", tag: "The System Without the Project" },
+  { name: "Growl AI", nameAr: "جرول للذكاء الاصطناعي والأتمتة", accent: "#0FCFC0", href: "/sectors/ai", tag: "Automation Sold as a Product" },
 ]
 
 export default function AboutPage() {

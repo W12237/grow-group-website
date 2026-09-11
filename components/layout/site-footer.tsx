@@ -84,7 +84,7 @@ export function SiteFooter() {
             </div>
 
             <ul className="space-y-3">
-              {SECTORS.map((sector) => (
+              {SECTORS.slice(0, 5).map((sector) => (
                 <li key={sector.id}>
                   <Link
                     href={sector.canonicalHref}

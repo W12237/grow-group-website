@@ -166,10 +166,10 @@ export default function HubPage() {
           sectorNumber="03"
           sectorName="Growl Hub"
           sectorNameAr="جرول هب للمنتجات السحابية"
-          headline="The System Without the Project"
-          headlineAr="النظام المتكامل دون تعقيدات المشاريع"
-          description="Enterprise systems re-engineered as subscription products. Pay as you go, monthly or annual."
-          descriptionAr="أنظمة مؤسسية أُعيدت هندستها كمنتجات اشتراك سحابية جاهزة. ادفع حسب استخدامك شهرياً أو سنوياً."
+          headline="The Connected Operating Suite"
+          headlineAr="المنظومة السحابية المتكاملة لإدارة الأعمال"
+          description="Pre-integrated modular business platforms for operations, multi-location retail, financial pipelines, and enterprise workforce management."
+          descriptionAr="أنظمة تشغيلية متكاملة ومترابطة لإدارة العمليات، المبيعات متعددة الفروع، الرقابة المالية، والموارد البشرية."
           accentColor={ACCENT}
           accentTint={TINT}
           heroImage="/images/sectors/hub-hero.webp"

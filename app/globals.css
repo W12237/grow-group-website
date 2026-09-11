@@ -21,15 +21,20 @@
 
   /* ── 5 Sector accent colors & tints (Growl Identity Guide) ───────── */
   --division-holding: #000823;
-  --division-marketing: #E5389A;      /* Magenta Pulse */
+  --division-marketing: #E5389A;
+  /* Magenta Pulse */
   --division-marketing-tint: #F1A7D1;
-  --division-technology: #FF7A00;     /* Strong Orange */
+  --division-technology: #FF7A00;
+  /* Strong Orange */
   --division-technology-tint: #FCCA9C;
-  --division-ai: #0FCFC0;             /* Aqua Core */
+  --division-ai: #0FCFC0;
+  /* Aqua Core */
   --division-ai-tint: #A2F6EF;
-  --division-cybersecurity: #DA291C;  /* Fortinet Red */
+  --division-cybersecurity: #DA291C;
+  /* Fortinet Red */
   --division-cybersecurity-tint: #F1ACA7;
-  --division-hub: #1F6FEB;            /* Signal Blue */
+  --division-hub: #1F6FEB;
+  /* Signal Blue */
   --division-hub-tint: #A3C3F5;
 
   /* ── Active division (overridden per page) ─────────────────────────── */

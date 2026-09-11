@@ -44,11 +44,10 @@ export function HomeSectors() {
                   key={sector.id}
                   onMouseEnter={() => setActiveSectorId(sector.id)}
                   onClick={() => setActiveSectorId(sector.id)}
-                  className={`group relative p-6 md:p-7 rounded-2xl border transition-all duration-300 cursor-pointer ${
-                    isSelected
+                  className={`group relative p-6 md:p-7 rounded-2xl border transition-all duration-300 cursor-pointer ${isSelected
                       ? "bg-white shadow-lg border-transparent ring-2"
                       : "bg-white/60 hover:bg-white border-[#000823]/[0.08] hover:border-[#000823]/20 shadow-xs"
-                  }`}
+                    }`}
                   style={{
                     // @ts-expect-error custom ring color
                     "--tw-ring-color": isSelected ? sector.color : "transparent",

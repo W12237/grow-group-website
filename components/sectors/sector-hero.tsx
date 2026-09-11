@@ -84,17 +84,9 @@ export function SectorHero({
           </span>
         </div>
 
-        {/* ── Header Eyebrow with Official Sector Icon ─────────────────── */}
-        <div className="flex flex-wrap items-center gap-3.5 mb-6">
-          <div
-            className="w-11 h-11 rounded-xl flex items-center justify-center shrink-0 shadow-xs border transition-transform duration-300 hover:scale-105"
-            style={{
-              backgroundColor: `${accentColor}12`,
-              borderColor: `${accentColor}30`,
-            }}
-          >
-            <SectorIcon slug={sectorSlug} size={24} color={accentColor} />
-          </div>
+        {/* ── Header Eyebrow with Official Sector Icon (Prominent, NO border box) ── */}
+        <div className="flex flex-wrap items-center gap-4 mb-6">
+          <SectorIcon slug={sectorSlug} size={52} className="shrink-0 transition-transform duration-300 hover:scale-105" />
 
           <div className="flex items-center gap-2">
             <span

@@ -35,7 +35,7 @@ export function HomeAbout() {
   ]
 
   return (
-    <section id="about" className="py-16 sm:py-20 md:py-28 px-4 sm:px-6 md:px-12 lg:px-20 bg-white border-b border-[#000823]/[0.08]">
+    <section id="about" className="py-20 sm:py-24 md:py-28 px-5 sm:px-6 md:px-12 lg:px-20 bg-white border-b border-[#000823]/[0.08]">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           
@@ -96,8 +96,8 @@ export function HomeAbout() {
             </div>
           </div>
 
-          {/* ── Right Column: Clean Architectural Diagram (Harmonized with Work section) ── */}
-          <div className="lg:col-span-6">
+          {/* ── Right Column: Clean Architectural Diagram (Hidden on mobile to eliminate clutter) ── */}
+          <div className="hidden lg:block lg:col-span-6">
             <div className="relative rounded-2xl border border-[#000823]/[0.08] bg-[#F8F8F8] p-5 sm:p-7 md:p-8 text-[#000823] shadow-sm overflow-hidden">
               
               {/* Diagram Header */}
@@ -110,11 +110,11 @@ export function HomeAbout() {
 
               {/* Central Holding Core */}
               <div className="my-7 text-center">
-                <div className="inline-flex flex-col items-center px-6 py-4 rounded-xl bg-white border border-[#000823]/[0.08] shadow-xs">
+                <div className="inline-flex flex-col items-center px-6 py-4 rounded-xl bg-white shadow-xs">
                   <img
-                    src="/growl-icons/black-icon.png"
+                    src="/growl-icons/growl-group-icon.png"
                     alt="Growl Holding"
-                    className="w-10 h-10 object-contain mb-2"
+                    className="w-16 h-16 object-contain mb-3"
                   />
                   <span className="text-xs sm:text-sm font-bold tracking-[0.2em] font-mono text-[#000823]">
                     GROWL HOLDING

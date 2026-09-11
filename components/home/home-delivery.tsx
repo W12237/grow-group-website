@@ -47,10 +47,10 @@ export function HomeDelivery() {
   const { isAr } = useLanguage()
 
   return (
-    <section className="py-16 sm:py-20 md:py-28 px-4 sm:px-6 md:px-12 lg:px-20 bg-[#F8F8F8] border-b border-[#000823]/[0.08]">
+    <section className="py-20 sm:py-24 md:py-28 px-5 sm:px-6 md:px-12 lg:px-20 bg-[#F8F8F8] border-b border-[#000823]/[0.08]">
       <div className="max-w-6xl mx-auto">
         {/* ── Section Header ────────────────────────────────────────────── */}
-        <div className="max-w-3xl mb-12 md:mb-16">
+        <div className="max-w-3xl mb-10 sm:mb-14 md:mb-16">
           <SectionLabel>
             {isAr ? "منهجية العمل والتسليم" : "Delivery Approach"}
           </SectionLabel>
@@ -89,10 +89,15 @@ export function HomeDelivery() {
                   {isAr ? stage.nameAr : stage.name}
                 </h3>
 
-                {/* Stage Deliverables List */}
+                {/* Stage Deliverables List: Top 2 on mobile, all on desktop */}
                 <ul className="space-y-2">
                   {(isAr ? stage.pointsAr : stage.points).map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-2.5 text-xs text-[#000823]/75 leading-relaxed font-medium">
+                    <li
+                      key={idx}
+                      className={`items-start gap-2.5 text-xs text-[#000823]/75 leading-relaxed font-medium ${
+                        idx >= 2 ? "hidden sm:flex" : "flex"
+                      }`}
+                    >
                       <span className="text-[#000823]/30 font-mono mt-0.5">•</span>
                       <span>{item}</span>
                     </li>
@@ -100,8 +105,8 @@ export function HomeDelivery() {
                 </ul>
               </div>
 
-              {/* Quality Spec Footer */}
-              <div className="mt-8 pt-4 border-t border-[#000823]/[0.06] text-[10px] font-mono text-[#000823]/45 uppercase flex items-center justify-between">
+              {/* Quality Spec Footer (Hidden on mobile to reduce micro-noise) */}
+              <div className="hidden sm:flex mt-8 pt-4 border-t border-[#000823]/[0.06] text-[10px] font-mono text-[#000823]/45 uppercase items-center justify-between">
                 <span>Verified Milestones</span>
                 <span>Documented Signoff</span>
               </div>

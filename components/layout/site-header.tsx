@@ -109,7 +109,7 @@ export function SiteHeader() {
               <img
                 src="/growl-icons/white-icon.png"
                 alt="Growl Holding Group"
-                className="h-7 sm:h-8 md:h-10 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
+                className="h-8 sm:h-9 md:h-11 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
               />
             </Link>
 
@@ -232,64 +232,46 @@ export function SiteHeader() {
                 <div
                   className="rounded-2xl border border-white/15 p-5 shadow-2xl"
                   style={{
+                    backgroundColor: "rgba(0, 8, 35, 0.94)",
                     backdropFilter: "blur(32px)",
                     WebkitBackdropFilter: "blur(32px)",
-                    background: "rgba(0, 8, 35, 0.98)",
-                    boxShadow: "0 28px 72px rgba(0, 0, 0, 0.6), 0 0 30px rgba(113, 53, 229, 0.15)",
                   }}
                 >
-                  {/* Mega-menu Header */}
-                  <div className="flex items-center justify-between pb-3 border-b border-white/[0.08]">
-                    <div className="flex items-center gap-2.5">
+                  {/* Mega-menu Header: Clean Corporate Advisory Style (No AI badges or monospace) */}
+                  <div className="flex items-center justify-between pb-3.5 border-b border-white/[0.08]">
+                    <div className="flex items-center gap-3">
                       <img
                         src="/growl-icons/growl-group-icon.png"
-                        alt="Growl Co."
-                        className="w-6 h-6 rounded-md object-contain"
+                        alt="Growl Holding"
+                        className="w-9 h-9 object-contain shrink-0"
                       />
-                      <span className="text-[10px] tracking-[0.2em] text-white/70 uppercase font-mono font-bold">
-                        {isAr ? "دليل القطاعات الخمسة المتخصصة" : "THE FIVE GROWL SECTORS"}
-                      </span>
+                      <div>
+                        <h4 className="text-sm font-bold text-white tracking-tight">
+                          {isAr ? "القطاعات المتخصصة" : "Specialized Sectors"}
+                        </h4>
+                        <p className="text-[11px] text-white/60">
+                          {isAr ? "ممارسات هندسية وإبداعية متكاملة تحت مظلة المجموعة" : "Dedicated operating practices unified under Growl Group"}
+                        </p>
+                      </div>
                     </div>
-                    <span className="text-[10px] text-emerald-400 font-mono font-semibold bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-500/30">
-                      {isAr ? "5 قطاعات متخصصة" : "5 Specialized Sectors"}
-                    </span>
                   </div>
 
-                  {/* 5 Sectors Grid with official logos, names, colors, and short descriptions */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2 pt-3">
+                  {/* 5 Sectors Grid with standardized logos, names, and short descriptions */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2 pt-3.5">
                     {SECTORS.slice(0, 5).map((sector) => (
                       <Link
                         key={sector.id}
                         href={sector.canonicalHref}
-                        className="flex items-start gap-3 p-3 rounded-xl hover:bg-white/[0.05] transition-all group border border-transparent hover:border-white/10"
+                        className="flex items-start gap-3.5 p-3 rounded-xl hover:bg-white/[0.06] transition-all group border border-transparent hover:border-white/10"
                         onClick={() => setSectorsOpen(false)}
                       >
-                        <div
-                          className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 transition-transform duration-200 group-hover:scale-105 shadow-2xs"
-                          style={{
-                            backgroundColor: `${sector.color}20`,
-                            border: `1px solid ${sector.color}40`,
-                          }}
-                        >
-                          <SectorIcon slug={sector.slug} size={20} color={sector.color} />
-                        </div>
+                        <SectorIcon slug={sector.slug} size={36} className="shrink-0 transition-transform duration-200 group-hover:scale-105" />
 
                         <div className="flex-1 min-w-0">
-                          <div className="flex items-center justify-between gap-1 mb-1">
-                            <span className="text-[12.5px] font-bold text-white truncate">
-                              {isAr ? sector.nameAr : sector.name}
-                            </span>
-                            <span
-                              className="text-[9px] font-mono px-1.5 py-0.2 rounded font-bold shrink-0"
-                              style={{
-                                backgroundColor: `${sector.color}25`,
-                                color: sector.color,
-                              }}
-                            >
-                              {sector.index}
-                            </span>
-                          </div>
-                          <p className="text-[11px] text-white/60 group-hover:text-white/80 leading-snug line-clamp-2 transition-colors">
+                          <h5 className="text-[13px] font-semibold text-white group-hover:text-white transition-colors mb-1 truncate">
+                            {isAr ? sector.nameAr : sector.name}
+                          </h5>
+                          <p className="text-xs text-white/60 group-hover:text-white/80 leading-relaxed line-clamp-2 transition-colors">
                             {isAr ? sector.descriptionAr : sector.description}
                           </p>
                         </div>
@@ -298,17 +280,17 @@ export function SiteHeader() {
                   </div>
 
                   {/* Mega-menu Bottom Bar */}
-                  <div className="mt-3 pt-3 border-t border-white/[0.08] flex items-center justify-between px-2 text-[11px]">
+                  <div className="mt-3.5 pt-3.5 border-t border-white/[0.08] flex items-center justify-between px-2 text-xs">
                     <Link
                       href="/sectors"
-                      className="font-semibold text-white/80 hover:text-white transition-colors flex items-center gap-1.5 group"
+                      className="font-semibold text-[#B1A5F9] hover:text-white transition-colors flex items-center gap-1.5 group"
                       onClick={() => setSectorsOpen(false)}
                     >
-                      <span>{isAr ? "عرض الدليل الشامل لجميع القطاعات ←" : "Explore All 5 Sectors Directory"}</span>
-                      <span className="transition-transform group-hover:translate-x-0.5 font-mono">→</span>
+                      <span>{isAr ? "عرض الدليل الشامل للقطاعات ←" : "Explore All Sectors & Capabilities"}</span>
+                      <span className="transition-transform group-hover:translate-x-0.5">→</span>
                     </Link>
-                    <span className="text-[10px] text-white/40 font-mono">
-                      Single Master Services Agreement
+                    <span className="text-[11px] text-white/40">
+                      {isAr ? "تعاقد موحد عبر عقد رئيسي واحد (MSA)" : "Single Master Services Agreement"}
                     </span>
                   </div>
                 </div>
@@ -350,14 +332,14 @@ export function SiteHeader() {
                 <img
                   src="/growl-icons/white-icon.png"
                   alt="Growl Holding Group"
-                  className="h-10 w-auto object-contain"
+                  className="h-12 w-auto object-contain"
                 />
               </div>
 
               <div className="flex items-center gap-2">
                 <button
                   onClick={toggleLang}
-                  className="px-3 py-1.5 rounded-xl border border-white/15 text-xs font-mono font-semibold text-white/80 hover:text-white"
+                  className="px-3 py-1.5 rounded-xl border border-white/15 text-xs font-semibold text-white/80 hover:text-white"
                 >
                   {isAr ? "EN" : "العربية"}
                 </button>
@@ -368,58 +350,44 @@ export function SiteHeader() {
                   aria-label="Close navigation menu"
                 >
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M1 1L13 13M1 13L13 1" strokeLinecap="round" />
+                    <path d="M1 1L13 13M1 13L1" strokeLinecap="round" />
                   </svg>
                 </button>
               </div>
             </div>
 
-            {/* Clear Sector Links (Section 3 Requirement) */}
+            {/* Clear Sector Links (Corporate, Non-AI style) */}
             <div className="py-4 border-b border-white/[0.08]">
               <div className="flex items-center justify-between mb-3 px-1">
-                <span className="text-[10px] font-mono uppercase tracking-widest text-white/50 font-bold">
-                  {isAr ? "القطاعات المتخصصة الخمسة" : "Specialized Sectors (5)"}
+                <span className="text-xs font-semibold text-white/60">
+                  {isAr ? "القطاعات المتخصصة" : "Specialized Sectors"}
                 </span>
                 <Link
                   href="/sectors"
-                  className="text-xs font-semibold text-white/80 hover:text-white hover:underline font-mono"
+                  className="text-xs font-semibold text-[#B1A5F9] hover:text-white"
                   onClick={() => setMobileOpen(false)}
                 >
                   {isAr ? "عرض الكل ←" : "Overview →"}
                 </Link>
               </div>
 
-              <div className="space-y-1.5">
+              <div className="space-y-1">
                 {SECTORS.slice(0, 5).map((sector) => (
                   <Link
                     key={sector.id}
                     href={sector.canonicalHref}
-                    className="flex items-center justify-between p-2.5 rounded-xl hover:bg-white/[0.06] transition-colors"
+                    className="flex items-center justify-between p-2.5 rounded-xl hover:bg-white/[0.06] transition-colors group"
                     onClick={() => setMobileOpen(false)}
                   >
-                    <div className="flex items-center gap-3">
-                      <div
-                        className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0"
-                        style={{
-                          backgroundColor: `${sector.color}20`,
-                          border: `1px solid ${sector.color}40`,
-                        }}
-                      >
-                        <SectorIcon slug={sector.slug} size={18} color={sector.color} />
-                      </div>
-                      <span className="text-[13px] font-semibold text-white">
+                    <div className="flex items-center gap-3.5">
+                      <SectorIcon slug={sector.slug} size={36} className="shrink-0" />
+                      <span className="text-sm font-semibold text-white group-hover:text-white">
                         {isAr ? sector.nameAr : sector.name}
                       </span>
                     </div>
 
-                    <span
-                      className="text-[9px] font-mono font-bold px-2 py-0.5 rounded"
-                      style={{
-                        backgroundColor: `${sector.color}20`,
-                        color: sector.color,
-                      }}
-                    >
-                      {sector.index}
+                    <span className="text-xs text-white/40 transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1">
+                      →
                     </span>
                   </Link>
                 ))}

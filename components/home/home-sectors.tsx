@@ -14,10 +14,10 @@ export function HomeSectors() {
   const activeSector = SECTORS.find((s) => s.id === activeSectorId) || SECTORS[0]
 
   return (
-    <section id="sectors" className="py-16 sm:py-20 md:py-28 px-4 sm:px-6 md:px-12 lg:px-20 bg-[#F8F8F8] border-b border-[#000823]/[0.08]">
+    <section id="sectors" className="py-20 sm:py-24 md:py-28 px-5 sm:px-6 md:px-12 lg:px-20 bg-[#F8F8F8] border-b border-[#000823]/[0.08]">
       <div className="max-w-6xl mx-auto">
         {/* ── Section Header ────────────────────────────────────────────── */}
-        <div className="max-w-3xl mb-12 md:mb-16">
+        <div className="max-w-3xl mb-10 sm:mb-14 md:mb-16">
           <SectionLabel>
             {isAr ? "قطاعاتنا المتخصصة" : "Our Sectors"}
           </SectionLabel>
@@ -36,7 +36,7 @@ export function HomeSectors() {
         {/* ── Structured Editorial Layout: Interactive List & Focus Panel ── */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* Left Column: Editorial 5-Sector Rows */}
-          <div className="lg:col-span-7 space-y-3.5">
+          <div className="lg:col-span-7 space-y-4 sm:space-y-4.5">
             {SECTORS.map((sector) => {
               const isSelected = sector.id === activeSectorId
               return (
@@ -54,32 +54,25 @@ export function HomeSectors() {
                   }}
                 >
                   <div className="flex items-start justify-between gap-3 sm:gap-4">
-                    <div className="flex items-start gap-3 sm:gap-4 min-w-0">
-                      {/* Sector Number */}
-                      <span
-                        className="font-mono text-xs font-bold tracking-wider px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg shrink-0 mt-0.5 transition-transform duration-200 group-hover:scale-105"
-                        style={{
-                          backgroundColor: `${sector.color}15`,
-                          color: sector.color,
-                        }}
-                      >
-                        {sector.index}
-                      </span>
+                    <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
+                      {/* Prominent Floating Sector Logo (NO card, NO borders, large & crisp) */}
+                      <SectorIcon slug={sector.slug} size={42} className="shrink-0 transition-transform duration-300 group-hover:scale-110" />
 
                       <div className="min-w-0">
                         {/* Official Sector Name */}
                         <div className="flex items-center gap-2 mb-1">
-                          <div
-                            className="w-5 h-5 sm:w-6 sm:h-6 rounded-md flex items-center justify-center shrink-0"
-                            style={{
-                              backgroundColor: `${sector.color}20`,
-                            }}
-                          >
-                            <SectorIcon slug={sector.slug} size={14} color={sector.color} />
-                          </div>
-                          <h3 className="text-sm sm:text-base font-bold text-[#000823] truncate">
+                          <h3 className="text-base sm:text-lg font-bold text-[#000823] truncate">
                             {isAr ? sector.nameAr : sector.name}
                           </h3>
+                          <span
+                            className="font-mono text-[10px] font-bold px-1.5 py-0.5 rounded"
+                            style={{
+                              backgroundColor: `${sector.color}15`,
+                              color: sector.color,
+                            }}
+                          >
+                            {sector.index}
+                          </span>
                         </div>
 
                         {/* Short Description */}
@@ -87,8 +80,8 @@ export function HomeSectors() {
                           {isAr ? sector.descriptionAr : sector.description}
                         </p>
 
-                        {/* Selected Services Tags */}
-                        <div className="flex flex-wrap gap-1.5 mt-2.5 sm:mt-3">
+                        {/* Selected Services Tags: Hidden on mobile to avoid clutter */}
+                        <div className="hidden sm:flex flex-wrap gap-1.5 mt-2.5 sm:mt-3">
                           {(isAr ? sector.servicesAr : sector.services).slice(0, 3).map((service, idx) => (
                             <span
                               key={idx}
@@ -136,8 +129,8 @@ export function HomeSectors() {
             })}
           </div>
 
-          {/* Right Column: Dynamic Deep-Dive Panel for Active Sector */}
-          <div className="lg:col-span-5 sticky top-28">
+          {/* Right Column: Dynamic Deep-Dive Panel for Active Sector (Desktop only to prevent mobile duplication) */}
+          <div className="hidden lg:block lg:col-span-5 sticky top-28">
             <div
               className="rounded-3xl p-5 sm:p-6 md:p-7 bg-white border shadow-xl relative overflow-hidden transition-all duration-300"
               style={{
@@ -153,11 +146,8 @@ export function HomeSectors() {
 
               {/* Spec Header */}
               <div className="flex items-center justify-between pb-3.5 border-b border-[#000823]/[0.08] mb-5">
-                <div className="flex items-center gap-2">
-                  <span
-                    className="w-2 h-2 rounded-full"
-                    style={{ backgroundColor: activeSector.color }}
-                  />
+                <div className="flex items-center gap-2.5">
+                  <SectorIcon slug={activeSector.slug} size={32} className="shrink-0" />
                   <span className="text-[11px] font-mono font-bold tracking-wider text-[#000823]/70 uppercase">
                     {isAr ? `نظرة تفصيلية // قطاع ${activeSector.index}` : `SECTOR DOSSIER // ${activeSector.index}`}
                   </span>

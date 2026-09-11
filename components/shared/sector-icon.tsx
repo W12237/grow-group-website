@@ -11,11 +11,11 @@ export interface SectorIconProps {
 
 export function SectorIcon({
   slug,
-  size = 18,
+  size = 32,
   className = "",
   color = "currentColor", // Still accept it so we don't break types, even though images don't use it
 }: SectorIconProps) {
-  const normalized = slug.toLowerCase().replace("growl-", "").replace("growl ", "")
+  const normalized = (slug || "").toLowerCase().replace("growl-", "").replace("growl ", "")
 
   let src = ""
 

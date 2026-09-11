@@ -74,16 +74,8 @@ export default function SectorsDirectoryPage() {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
                 {/* Left: Sector Identity & Copy */}
                 <div className="lg:col-span-8 space-y-3.5">
-                  <div className="flex items-center gap-3">
-                    <div
-                      className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 shadow-xs"
-                      style={{
-                        backgroundColor: `${sector.color}15`,
-                        border: `1px solid ${sector.color}35`,
-                      }}
-                    >
-                      <SectorIcon slug={sector.slug} size={24} color={sector.color} />
-                    </div>
+                  <div className="flex items-center gap-4">
+                    <SectorIcon slug={sector.slug} size={48} className="shrink-0 transition-transform duration-300 group-hover:scale-105" />
 
                     <div>
                       <div className="flex items-center gap-2">

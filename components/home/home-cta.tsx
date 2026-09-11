@@ -8,7 +8,7 @@ export function HomeCta() {
   const { isAr } = useLanguage()
 
   return (
-    <section className="relative py-20 sm:py-24 md:py-28 px-4 sm:px-6 md:px-12 lg:px-20 bg-[#000823] text-white overflow-hidden border-t border-white/[0.08]">
+    <section className="relative py-24 sm:py-28 md:py-32 px-5 sm:px-6 md:px-12 lg:px-20 bg-[#000823] text-white overflow-hidden border-t border-white/[0.08]">
       {/* ── Controlled Ambient Illumination (Purple Glow & Medium Purple) ─ */}
       <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[340px] rounded-full opacity-25 blur-[120px] pointer-events-none"
@@ -19,14 +19,12 @@ export function HomeCta() {
       />
 
       <div className="relative z-10 max-w-3xl mx-auto text-center">
-        {/* Masterbrand Icon Lockup */}
-        <div className="inline-flex items-center justify-center p-2.5 rounded-2xl bg-white/[0.04] border border-white/15 mb-6 shadow-xl">
-          <img
-            src="/growl-icons/white-icon.png"
-            alt="Growl Holding Group"
-            className="w-10 h-10 object-contain shadow-xs"
-          />
-        </div>
+        {/* Masterbrand Icon: Prominent, Large, NO card, NO border box */}
+        <img
+          src="/growl-icons/white-icon.png"
+          alt="Growl Holding Group"
+          className="w-20 h-20 sm:w-24 sm:h-24 object-contain mb-8 mx-auto drop-shadow-2xl transition-transform hover:scale-105 duration-300"
+        />
 
         {/* Section Headline */}
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] font-bold tracking-tight text-white leading-[1.15] mb-4">
@@ -61,13 +59,17 @@ export function HomeCta() {
           </a>
         </div>
 
-        {/* Fast Turnaround Assurance */}
-        <div className="mt-12 pt-8 border-t border-white/[0.08] flex flex-wrap items-center justify-center gap-6 text-[11px] font-mono text-white/40">
-          <span>DIRECT EXECUTIVE & ENGAGEMENT LEADSHIP</span>
+        {/* Fast Turnaround Assurance: Desktop full ticker, mobile clean badge */}
+        <div className="hidden sm:flex mt-12 pt-8 border-t border-white/[0.08] flex-wrap items-center justify-center gap-6 text-[11px] font-mono text-white/40">
+          <span>DIRECT EXECUTIVE & ENGAGEMENT LEADERSHIP</span>
           <span>•</span>
           <span>CAIRO HEADQUARTERS</span>
           <span>•</span>
           <span>STRICT NDA GUARANTEED</span>
+        </div>
+
+        <div className="flex sm:hidden mt-10 pt-6 border-t border-white/[0.08] items-center justify-center text-[11px] font-mono text-white/45">
+          <span>{isAr ? "المقر الرئيسي: القاهرة · مشاورات تنفيذية مباشرة" : "Cairo HQ · Strategic Client Briefings"}</span>
         </div>
       </div>
     </section>

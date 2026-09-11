@@ -112,10 +112,10 @@ export function HomeCapabilities() {
   const { isAr } = useLanguage()
 
   return (
-    <section className="py-16 sm:py-20 md:py-28 px-4 sm:px-6 md:px-12 lg:px-20 bg-[#F8F8F8] border-b border-[#000823]/[0.08]">
+    <section className="py-20 sm:py-24 md:py-28 px-5 sm:px-6 md:px-12 lg:px-20 bg-[#F8F8F8] border-b border-[#000823]/[0.08]">
       <div className="max-w-6xl mx-auto">
         {/* ── Section Header ────────────────────────────────────────────── */}
-        <div className="max-w-3xl mb-12 md:mb-16">
+        <div className="max-w-3xl mb-10 sm:mb-14 md:mb-16">
           <SectionLabel>
             {isAr ? "مجالات القدرات والتنفيذ" : "Selected Capabilities"}
           </SectionLabel>
@@ -131,13 +131,15 @@ export function HomeCapabilities() {
           </p>
         </div>
 
-        {/* ── Structured Editorial Grid (8 entries) ────────────────────── */}
+        {/* ── Structured Editorial Grid (4 on mobile, 8 on desktop) ──────── */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
-          {CAPABILITIES.map((cap) => (
+          {CAPABILITIES.map((cap, idx) => (
             <Link
               key={cap.number}
               href={cap.href}
-              className="group relative flex flex-col justify-between p-4.5 sm:p-5 md:p-6 rounded-2xl bg-white border border-[#000823]/[0.08] hover:border-[#000823]/25 hover:-translate-y-1.5 hover:shadow-xl transition-all duration-300 ease-out"
+              className={`group relative flex-col justify-between p-5 sm:p-5.5 md:p-6 rounded-2xl bg-white border border-[#000823]/[0.08] hover:border-[#000823]/25 hover:-translate-y-1.5 hover:shadow-xl transition-all duration-300 ease-out ${
+                idx >= 4 ? "hidden md:flex" : "flex"
+              }`}
             >
               <div>
                 {/* Top Row: Number and Sector Tag */}
@@ -178,6 +180,17 @@ export function HomeCapabilities() {
               </div>
             </Link>
           ))}
+        </div>
+
+        {/* Mobile View All Link Button */}
+        <div className="mt-8 text-center md:hidden">
+          <Link
+            href="/sectors"
+            className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-white border border-[#000823]/10 text-[#000823] text-xs font-mono font-bold tracking-wider hover:bg-neutral-50 shadow-xs active:scale-[0.98] transition-all"
+          >
+            <span>{isAr ? "عرض جميع القدرات والقطاعات الـ 5" : "Explore All 8 Operational Capabilities"}</span>
+            <span className="ltr:ml-2 rtl:mr-2">→</span>
+          </Link>
         </div>
       </div>
     </section>

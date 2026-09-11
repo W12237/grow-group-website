@@ -100,7 +100,7 @@ export default function PartnersEcosystemPage() {
                       : "bg-[#F8F8F8] text-[#000823]/70 hover:bg-[#000823]/[0.05]"
                   }`}
                 >
-                  <SectorIcon slug={s.slug} size={14} color={isSelected ? "#FFF" : s.color} />
+                  <SectorIcon slug={s.slug} size={20} color={isSelected ? "#FFF" : s.color} />
                   <span>{isAr ? s.nameAr : s.name}</span>
                 </button>
               )
@@ -166,16 +166,7 @@ export default function PartnersEcosystemPage() {
                       </div>
 
                       {sectorDef && (
-                        <div
-                          className="w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
-                          style={{
-                            backgroundColor: `${sectorDef.color}15`,
-                            border: `1px solid ${sectorDef.color}30`,
-                          }}
-                          title={sectorDef.name}
-                        >
-                          <SectorIcon slug={sectorDef.slug} size={14} color={sectorDef.color} />
-                        </div>
+                        <SectorIcon slug={sectorDef.slug} size={32} className="shrink-0" />
                       )}
                     </div>
 

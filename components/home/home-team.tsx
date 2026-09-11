@@ -52,10 +52,10 @@ export function HomeTeam() {
   const { isAr } = useLanguage()
 
   return (
-    <section id="team" className="py-16 sm:py-20 md:py-28 px-4 sm:px-6 md:px-12 lg:px-20 bg-[#F8F8F8] border-b border-[#000823]/[0.08]">
+    <section id="team" className="py-20 sm:py-24 md:py-28 px-5 sm:px-6 md:px-12 lg:px-20 bg-[#F8F8F8] border-b border-[#000823]/[0.08]">
       <div className="max-w-6xl mx-auto">
         {/* ── Section Header ────────────────────────────────────────────── */}
-        <div className="max-w-3xl mb-12 md:mb-16">
+        <div className="max-w-3xl mb-10 sm:mb-14 md:mb-16">
           <SectionLabel>
             {isAr ? "فريق القيادة والتنفيذ" : "Leadership Team"}
           </SectionLabel>
@@ -72,7 +72,7 @@ export function HomeTeam() {
         </div>
 
         {/* ── Team Grid: 3 Executive Leaders ──────────────────────────────── */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-6 lg:gap-8">
           {TEAM_MEMBERS.map((member) => (
             <div
               key={member.name}
@@ -126,8 +126,8 @@ export function HomeTeam() {
                   </p>
                 </div>
 
-                {/* Team Spec Tag */}
-                <div className="mt-5 pt-3.5 border-t border-[#000823]/[0.06] flex items-center justify-between text-[10px] font-mono text-[#000823]/40 uppercase">
+                {/* Team Spec Tag (Hidden on mobile) */}
+                <div className="hidden sm:flex mt-5 pt-3.5 border-t border-[#000823]/[0.06] items-center justify-between text-[10px] font-mono text-[#000823]/40 uppercase">
                   <span>Executive Council</span>
                   <span>Cairo HQ</span>
                 </div>

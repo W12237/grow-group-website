@@ -90,7 +90,7 @@ export default function CaseStudiesPage() {
                     : "bg-[#F8F8F8] text-[#525866] hover:text-[#000823] hover:bg-[#000823]/[0.05]"
                 }`}
               >
-                <SectorIcon slug={s.slug} size={14} color={isSelected ? "#FFF" : s.color} />
+                <SectorIcon slug={s.slug} size={20} color={isSelected ? "#FFF" : s.color} />
                 <span>{isAr ? s.nameAr : s.name}</span>
               </button>
             )
@@ -106,23 +106,19 @@ export default function CaseStudiesPage() {
             return (
               <div
                 key={cs.id}
-                className="rounded-2xl bg-white border border-[#000823]/[0.08] p-6 sm:p-8 md:p-10 shadow-xs transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group relative overflow-hidden"
+                className="rounded-2xl bg-white border border-[#000823]/[0.08] p-5 sm:p-8 md:p-10 shadow-xs transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group relative overflow-hidden"
               >
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 relative z-10 items-start">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 relative z-10 items-start">
                   
                   {/* Left: Metadata, Title, Challenge, Solution */}
                   <div className="lg:col-span-8 space-y-4">
-                    <div className="flex flex-wrap items-center gap-2.5">
-                      <span className="text-[11px] font-mono text-[#525866] uppercase tracking-wider">
-                        {isAr ? cs.clientIndustryAr : cs.clientIndustry}
-                      </span>
-                      <span className="text-[#000823]/20">•</span>
-                      <div className="flex items-center gap-1.5">
+                    <div className="flex items-center justify-between gap-3 pb-3 border-b border-[#000823]/[0.06]">
+                      <div className="flex items-center gap-3">
                         {sectorDef && (
-                          <SectorIcon slug={sectorDef.slug} size={14} color={cs.accentColor} />
+                          <SectorIcon slug={sectorDef.slug} size={38} className="shrink-0" />
                         )}
                         <span
-                          className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded"
+                          className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded inline-block"
                           style={{
                             backgroundColor: `${cs.accentColor}18`,
                             color: cs.accentColor,
@@ -131,14 +127,19 @@ export default function CaseStudiesPage() {
                           {isAr ? cs.sectorNameAr : cs.sectorName}
                         </span>
                       </div>
+
+                      <span className="text-[11px] font-mono text-[#525866] uppercase tracking-wider truncate max-w-[160px]">
+                        {isAr ? cs.clientIndustryAr : cs.clientIndustry}
+                      </span>
                     </div>
 
                     <h2 className="text-xl sm:text-2xl font-bold text-[#000823] leading-snug">
                       {isAr ? cs.titleAr : cs.title}
                     </h2>
 
-                    <div className="space-y-3.5 pt-1">
-                      <div>
+                    <div className="space-y-3 pt-1">
+                      {/* Business Challenge (Hidden on mobile to decrease dense text) */}
+                      <div className="hidden sm:block">
                         <h3 className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#000823]/60 mb-1">
                           {isAr ? "التحدي التجاري والتقني" : "BUSINESS CHALLENGE"}
                         </h3>
@@ -157,8 +158,8 @@ export default function CaseStudiesPage() {
                       </div>
                     </div>
 
-                    {/* Technologies Tag Array */}
-                    <div className="pt-3 border-t border-[#000823]/[0.06]">
+                    {/* Technologies Tag Array: Hidden on mobile */}
+                    <div className="hidden sm:block pt-3 border-t border-[#000823]/[0.06]">
                       <div className="text-[10px] font-mono uppercase tracking-wider text-[#000823]/50 mb-2">
                         {isAr ? "التقنيات المستخدمة" : "TECHNOLOGY DEPLOYED"}
                       </div>
@@ -175,26 +176,26 @@ export default function CaseStudiesPage() {
                     </div>
                   </div>
 
-                  {/* Right: Metric Box and Action */}
-                  <div className="lg:col-span-4 flex flex-col justify-between p-6 rounded-xl bg-[#F8F8F8] border border-[#000823]/[0.08] h-full">
+                  {/* Right: Metric and Action (NO nested card on mobile!) */}
+                  <div className="lg:col-span-4 flex flex-col justify-between pt-5 mt-2 border-t border-[#000823]/[0.08] lg:border-t-0 lg:mt-0 lg:pt-0 lg:p-6 lg:rounded-xl lg:bg-[#F8F8F8] lg:border lg:border-[#000823]/[0.08] h-full">
                     <div>
-                      <div className="text-[10px] font-mono font-bold uppercase tracking-wider text-[#000823]/50 mb-2">
+                      <div className="text-[10px] font-mono font-bold uppercase tracking-wider text-[#000823]/50 mb-1">
                         {isAr ? "النتيجة المقاسة" : "MEASURED RESULT"}
                       </div>
 
                       <div
-                        className="text-3xl sm:text-4xl font-bold mb-2 font-mono tracking-tight"
+                        className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-1.5 font-mono tracking-tight"
                         style={{ color: cs.accentColor }}
                       >
                         {cs.metricsBadge}
                       </div>
 
-                      <p className="text-xs sm:text-sm text-[#000823] font-semibold leading-snug mb-5">
+                      <p className="text-xs sm:text-sm text-[#000823] font-semibold leading-snug mb-4">
                         {isAr ? cs.measurableResultAr : cs.measurableResult}
                       </p>
                     </div>
 
-                    <div className="pt-4 border-t border-[#000823]/[0.06]">
+                    <div className="pt-3 border-t border-[#000823]/[0.06]">
                       <Link
                         href={sectorDef ? sectorDef.canonicalHref : "/contact"}
                         className="group inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-[#000823] hover:text-[#7135E5] transition-colors"

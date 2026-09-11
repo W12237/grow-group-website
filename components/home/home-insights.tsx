@@ -73,10 +73,10 @@ export function HomeInsights() {
   const { isAr } = useLanguage()
 
   return (
-    <section id="insights" className="py-16 sm:py-20 md:py-28 px-4 sm:px-6 md:px-12 lg:px-20 bg-white border-b border-[#000823]/[0.08]">
+    <section id="insights" className="py-20 sm:py-24 md:py-28 px-5 sm:px-6 md:px-12 lg:px-20 bg-white border-b border-[#000823]/[0.08]">
       <div className="max-w-6xl mx-auto">
         {/* ── Section Header ────────────────────────────────────────────── */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 md:mb-16">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-14 md:mb-16">
           <div className="max-w-3xl">
             <SectionLabel>
               {isAr ? "الرؤى والبحوث التقنية" : "Insights & Research"}
@@ -95,20 +95,22 @@ export function HomeInsights() {
 
           <Link
             href="/insights"
-            className="group inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#000823] hover:opacity-85 font-mono shrink-0 transition-opacity"
+            className="hidden md:inline-flex group items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#000823] hover:opacity-85 font-mono shrink-0 transition-opacity"
           >
             <span>{isAr ? "عرض أرشيف الرؤى" : "Explore All Insights"}</span>
             <span className="transition-transform duration-200 group-hover:translate-x-1 rtl:group-hover:-translate-x-1">→</span>
           </Link>
         </div>
 
-        {/* ── 3 Editorial Insight Cards ─────────────────────────────────── */}
+        {/* ── Editorial Insight Cards (Top 2 on mobile, 3 on desktop) ───── */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
-          {INSIGHTS.map((item) => (
+          {INSIGHTS.map((item, idx) => (
             <Link
               key={item.id}
               href={item.href}
-              className="group flex flex-col justify-between p-5 sm:p-6 rounded-2xl bg-[#F8F8F8] border border-[#000823]/[0.08] hover:border-[#000823]/25 hover:bg-white hover:-translate-y-1.5 hover:shadow-xl transition-all duration-300 ease-out"
+              className={`group flex-col justify-between p-5 sm:p-6 rounded-2xl bg-[#F8F8F8] border border-[#000823]/[0.08] hover:border-[#000823]/25 hover:bg-white hover:-translate-y-1.5 hover:shadow-xl transition-all duration-300 ease-out ${
+                idx === 2 ? "hidden lg:flex" : "flex"
+              }`}
             >
               <div>
                 {/* Meta Header */}
@@ -151,6 +153,17 @@ export function HomeInsights() {
               </div>
             </Link>
           ))}
+        </div>
+
+        {/* Mobile View All Link */}
+        <div className="mt-8 text-center md:hidden">
+          <Link
+            href="/insights"
+            className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-[#F8F8F8] border border-[#000823]/10 text-[#000823] text-xs font-mono font-bold tracking-wider hover:bg-neutral-100 shadow-xs active:scale-[0.98] transition-all"
+          >
+            <span>{isAr ? "عرض جميع المقالات والأبحاث" : "Explore All Insights"}</span>
+            <span className="ltr:ml-2 rtl:mr-2">→</span>
+          </Link>
         </div>
       </div>
     </section>

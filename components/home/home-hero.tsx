@@ -4,6 +4,7 @@ import React, { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { useLanguage } from "@/components/language-context"
+import { SectorIcon } from "@/components/shared/sector-icon"
 import { SECTORS } from "@/lib/sectors-data"
 
 export function HomeHero() {
@@ -234,9 +235,12 @@ export function HomeHero() {
               }`}
             >
               <div>
-                <h2 className="text-base sm:text-lg font-bold text-[#000823] mb-1">
-                  {isAr ? currentShowcase.titleAr : currentShowcase.title}
-                </h2>
+                <div className="flex items-center gap-3 mb-1.5">
+                  <SectorIcon slug={activeSector.slug} size={36} className="shrink-0" />
+                  <h2 className="text-base sm:text-lg font-bold text-[#000823]">
+                    {isAr ? currentShowcase.titleAr : currentShowcase.title}
+                  </h2>
+                </div>
                 <p className="text-xs sm:text-sm text-[#525866] leading-relaxed line-clamp-2">
                   {isAr ? currentShowcase.captionAr : currentShowcase.caption}
                 </p>
@@ -259,9 +263,19 @@ export function HomeHero() {
 
         </div>
 
-        {/* ── Redesigned Bottom Information Strip ─────────────────────────── */}
-        <div className="mt-14 sm:mt-16 lg:mt-20 pt-8 sm:pt-10 border-t border-[#E6E7EC]">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
+        {/* ── Redesigned Bottom Information Strip: Streamlined on mobile, rich on desktop ── */}
+        <div className="mt-10 sm:mt-16 lg:mt-20 pt-6 sm:pt-10 border-t border-[#E6E7EC]">
+          {/* Mobile minimal reassurance strip */}
+          <div className="flex md:hidden items-center justify-between text-[11px] font-mono font-medium text-[#525866]">
+            <span>{isAr ? "قطاعات تخصصية" : "Specialist Divisions"}</span>
+            <span>•</span>
+            <span>{isAr ? "تنفيذ منسق" : "Coordinated Delivery"}</span>
+            <span>•</span>
+            <span>{isAr ? "أنظمة متصلة" : "Integrated Services"}</span>
+          </div>
+
+          {/* Desktop 3-Column Detailed View */}
+          <div className="hidden md:grid grid-cols-3 gap-8 lg:gap-12">
             {INFO_COLUMNS.map((col, idx) => (
               <div key={idx} className="flex flex-col">
                 <h3 className="text-sm sm:text-base font-bold text-[#000823] mb-1.5">

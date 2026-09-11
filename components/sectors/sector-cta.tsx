@@ -49,10 +49,8 @@ export function SectorCta({
       />
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
-        {/* Sector Icon Lockup */}
-        <div className="inline-flex items-center justify-center p-3.5 rounded-2xl bg-white/[0.08] border border-white/15 mb-8 backdrop-blur-md shadow-lg">
-          <SectorIcon slug={sectorSlug} size={32} color={accentColor} />
-        </div>
+        {/* Sector Icon: Large, Prominent, NO card, NO border box */}
+        <SectorIcon slug={sectorSlug} size={64} className="mx-auto mb-8 drop-shadow-2xl transition-transform hover:scale-105 duration-300" />
 
         {/* Outcome-focused Headline */}
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.08] mb-6">

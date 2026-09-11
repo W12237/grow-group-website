@@ -98,10 +98,10 @@ export function HomePartners() {
   const currentCategory = CATEGORIES.find((c) => c.id === activeTab) || CATEGORIES[0]
 
   return (
-    <section id="partners" className="py-16 sm:py-20 md:py-28 px-4 sm:px-6 md:px-12 lg:px-20 bg-white border-b border-[#000823]/[0.08]">
+    <section id="partners" className="py-20 sm:py-24 md:py-28 px-5 sm:px-6 md:px-12 lg:px-20 bg-white border-b border-[#000823]/[0.08]">
       <div className="max-w-6xl mx-auto">
         {/* ── Section Header ────────────────────────────────────────────── */}
-        <div className="max-w-3xl mb-10 md:mb-14">
+        <div className="max-w-3xl mb-10 sm:mb-14 md:mb-16">
           <SectionLabel>
             {isAr ? "الشركاء والمنظومة التقنية" : "Partners & Technology Ecosystem"}
           </SectionLabel>
@@ -148,7 +148,9 @@ export function HomePartners() {
             {currentCategory.items.map((item, idx) => (
               <div
                 key={idx}
-                className="p-4 sm:p-5 rounded-2xl bg-[#F8F8F8] border border-[#000823]/[0.06] hover:border-[#000823]/25 hover:bg-white hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-out group flex flex-col justify-between"
+                className={`p-4 sm:p-5 rounded-2xl bg-[#F8F8F8] border border-[#000823]/[0.06] hover:border-[#000823]/25 hover:bg-white hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-out group flex-col justify-between ${
+                  idx >= 3 ? "hidden sm:flex" : "flex"
+                }`}
               >
                 <div>
                   <div className="flex items-center justify-between gap-1 mb-2">
@@ -175,8 +177,19 @@ export function HomePartners() {
           </div>
         </div>
 
-        {/* ── Formal Relationship Transparency Disclosure (Section 12) ─── */}
-        <div className="mt-12 p-5 rounded-2xl bg-[#F8F8F8] border border-[#000823]/[0.08] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        {/* Mobile View All Button */}
+        <div className="mt-8 text-center sm:hidden">
+          <Link
+            href="/partners"
+            className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-[#F8F8F8] border border-[#000823]/10 text-[#000823] text-xs font-mono font-bold tracking-wider hover:bg-neutral-100 shadow-xs active:scale-[0.98] transition-all"
+          >
+            <span>{isAr ? "دليل المنظومة التقنية بالكامل (24+ منصة)" : "Explore All Ecosystem Platforms (24+)"}</span>
+            <span className="ltr:ml-2 rtl:mr-2">→</span>
+          </Link>
+        </div>
+
+        {/* ── Formal Relationship Transparency Disclosure (Hidden on mobile) ─── */}
+        <div className="hidden sm:flex mt-12 p-5 rounded-2xl bg-[#F8F8F8] border border-[#000823]/[0.08] flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <div className="w-2 h-2 rounded-full bg-emerald-500 shrink-0" />
             <p className="text-xs text-[#000823]/65 leading-relaxed font-mono">

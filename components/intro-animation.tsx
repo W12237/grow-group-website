@@ -5,18 +5,18 @@ import { useLanguage } from "@/components/language-context"
 
 const MAX_LETTERS = 5
 
-const LETTER_IN_STAGGER  = 90    // ms between each letter appearing
-const LETTER_IN_DUR      = 700   // duration of each letter appear transition
-const HOLD_DURATION      = 300   // hold fully visible before exit
-const LETTERS_IN_TOTAL   = LETTER_IN_STAGGER * (MAX_LETTERS - 1) + LETTER_IN_DUR + HOLD_DURATION
+const LETTER_IN_STAGGER = 90    // ms between each letter appearing
+const LETTER_IN_DUR = 700   // duration of each letter appear transition
+const HOLD_DURATION = 300   // hold fully visible before exit
+const LETTERS_IN_TOTAL = LETTER_IN_STAGGER * (MAX_LETTERS - 1) + LETTER_IN_DUR + HOLD_DURATION
 
 const LETTER_OUT_STAGGER = 55    // ms between each letter disappearing
-const LETTER_OUT_DUR     = 450   // duration of each letter fade out
-const LETTERS_OUT_TOTAL  = LETTER_OUT_STAGGER * (MAX_LETTERS - 1) + LETTER_OUT_DUR
+const LETTER_OUT_DUR = 450   // duration of each letter fade out
+const LETTERS_OUT_TOTAL = LETTER_OUT_STAGGER * (MAX_LETTERS - 1) + LETTER_OUT_DUR
 
-const CURTAIN_DELAY      = LETTERS_IN_TOTAL + 100
-const CURTAIN_DURATION   = 1300  // matches the CSS transition on the curtain div
-const ANIM_TOTAL         = CURTAIN_DELAY + LETTERS_OUT_TOTAL + 1400
+const CURTAIN_DELAY = LETTERS_IN_TOTAL + 100
+const CURTAIN_DURATION = 1300  // matches the CSS transition on the curtain div
+const ANIM_TOTAL = CURTAIN_DELAY + LETTERS_OUT_TOTAL + 1400
 
 // Exported: moment the curtain finishes retracting — when the bg is fully visible
 export const INTRO_DURATION_MS = CURTAIN_DELAY + CURTAIN_DURATION
@@ -62,16 +62,16 @@ export function IntroAnimation({ onDone }: { onDone: () => void }) {
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="flex" style={{ gap: isAr ? "0.15em" : "0.06em" }}>
           {currentLetters.map((letter, i) => {
-            const inDelay  = i * LETTER_IN_STAGGER
+            const inDelay = i * LETTER_IN_STAGGER
             const outDelay = i * LETTER_OUT_STAGGER
 
             // idle → invisible starting position
             const isIdle = phase === "idle"
-            const isIn   = phase === "in"
-            const isOut  = phase === "out"
+            const isIn = phase === "in"
+            const isOut = phase === "out"
 
-            const opacity    = isIdle ? 0 : isIn ? 1 : 0
-            const blur       = isIdle ? 36 : isIn ? 0 : 24
+            const opacity = isIdle ? 0 : isIn ? 1 : 0
+            const blur = isIdle ? 36 : isIn ? 0 : 24
             const translateY = isIdle ? 48 : isIn ? 0 : -20
 
             const transition = isOut
@@ -79,10 +79,10 @@ export function IntroAnimation({ onDone }: { onDone: () => void }) {
                  filter  ${LETTER_OUT_DUR}ms cubic-bezier(0.4,0,1,1) ${outDelay}ms,
                  transform ${LETTER_OUT_DUR}ms cubic-bezier(0.4,0,1,1) ${outDelay}ms`
               : isIn
-              ? `opacity ${LETTER_IN_DUR}ms cubic-bezier(0.16,1,0.3,1) ${inDelay}ms,
+                ? `opacity ${LETTER_IN_DUR}ms cubic-bezier(0.16,1,0.3,1) ${inDelay}ms,
                  filter  ${LETTER_IN_DUR}ms cubic-bezier(0.16,1,0.3,1) ${inDelay}ms,
                  transform ${LETTER_IN_DUR}ms cubic-bezier(0.16,1,0.3,1) ${inDelay}ms`
-              : "none"
+                : "none"
 
             return (
               <span

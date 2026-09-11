@@ -1,6 +1,7 @@
 "use client"
 
 import React from "react"
+import { IntroAnimation } from "@/components/intro-animation"
 import { SiteHeader } from "@/components/layout/site-header"
 import { SiteFooter } from "@/components/layout/site-footer"
 import { HomeHero } from "@/components/home/home-hero"
@@ -17,6 +18,9 @@ import { HomeCta } from "@/components/home/home-cta"
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-[#F8F8F8] text-[#000823] flex flex-col selection:bg-[#7135E5] selection:text-white">
+      {/* 0. Reload / Initial Load GROWL Word Animation */}
+      <IntroAnimation />
+
       {/* 1. Sticky Header */}
       <SiteHeader />
 

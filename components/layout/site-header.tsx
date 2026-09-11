@@ -125,9 +125,8 @@ export function SiteHeader() {
                 >
                   {link.isDropdown ? (
                     <button
-                      className={`text-[11px] hover:text-white transition-colors duration-200 tracking-[0.16em] uppercase flex items-center gap-1.5 font-semibold py-1 cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-white/30 rounded ${
-                        sectorsOpen ? "text-white" : "text-white/75"
-                      }`}
+                      className={`text-[11px] hover:text-white transition-colors duration-200 tracking-[0.16em] uppercase flex items-center gap-1.5 font-semibold py-1 cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-white/30 rounded ${sectorsOpen ? "text-white" : "text-white/75"
+                        }`}
                       onClick={() => setSectorsOpen(!sectorsOpen)}
                       aria-expanded={sectorsOpen}
                       aria-haspopup="true"
@@ -141,9 +140,8 @@ export function SiteHeader() {
                         height="10"
                         viewBox="0 0 10 10"
                         fill="none"
-                        className={`transition-transform duration-200 ${
-                          sectorsOpen ? "rotate-180 text-white" : "text-white/40"
-                        }`}
+                        className={`transition-transform duration-200 ${sectorsOpen ? "rotate-180 text-white" : "text-white/40"
+                          }`}
                         aria-hidden="true"
                       >
                         <path

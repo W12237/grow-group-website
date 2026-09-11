@@ -123,11 +123,10 @@ export function HomePartners() {
             <button
               key={cat.id}
               onClick={() => setActiveTab(cat.id)}
-              className={`px-4 py-2 rounded-xl text-xs font-semibold tracking-wider transition-all duration-200 cursor-pointer ${
-                activeTab === cat.id
-                  ? "bg-[#000823] text-white shadow-xs"
-                  : "bg-[#F8F8F8] text-[#000823]/70 hover:text-[#000823] hover:bg-[#000823]/[0.05]"
-              }`}
+              className={`px-4 py-2 rounded-xl text-xs font-semibold tracking-wider transition-all duration-200 cursor-pointer ${activeTab === cat.id
+                ? "bg-[#000823] text-white shadow-xs"
+                : "bg-[#F8F8F8] text-[#000823]/70 hover:text-[#000823] hover:bg-[#000823]/[0.05]"
+                }`}
             >
               {isAr ? cat.nameAr : cat.name}
             </button>

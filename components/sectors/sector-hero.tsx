@@ -116,11 +116,11 @@ export function SectorHero({
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
           {/* Left Column: Sector Identity & CTAs */}
           <div className="lg:col-span-7">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[4.25rem] font-bold tracking-tight leading-[1.08] mb-6 text-[#000823] break-words">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] xl:text-[3.5rem] font-bold tracking-tight leading-[1.12] mb-5 text-[#000823] break-words">
               {isAr ? headlineAr : headline}
             </h1>
 
-            <p className="text-base sm:text-lg md:text-[19px] text-[#000823]/75 leading-relaxed font-normal mb-8 max-w-xl">
+            <p className="text-base sm:text-lg text-[#525866] leading-[1.6] font-normal mb-8 max-w-xl">
               {isAr ? descriptionAr : description}
             </p>
 

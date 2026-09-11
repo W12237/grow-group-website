@@ -98,19 +98,19 @@ export function HomePartners() {
   const currentCategory = CATEGORIES.find((c) => c.id === activeTab) || CATEGORIES[0]
 
   return (
-    <section id="partners" className="py-24 md:py-32 px-6 md:px-12 lg:px-20 bg-white border-b border-[#000823]/[0.08]">
+    <section id="partners" className="py-16 sm:py-20 md:py-28 px-4 sm:px-6 md:px-12 lg:px-20 bg-white border-b border-[#000823]/[0.08]">
       <div className="max-w-6xl mx-auto">
         {/* ── Section Header ────────────────────────────────────────────── */}
-        <div className="max-w-3xl mb-14 md:mb-16">
+        <div className="max-w-3xl mb-10 md:mb-14">
           <SectionLabel>
             {isAr ? "الشركاء والمنظومة التقنية" : "Partners & Technology Ecosystem"}
           </SectionLabel>
 
-          <h2 className="mt-4 text-3xl md:text-5xl font-bold tracking-tight text-[#000823] leading-[1.1]">
+          <h2 className="mt-3 text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#000823] leading-[1.15]">
             {isAr ? "نبني على معايير ومنصات عالمية موثوقة." : "Built on trusted platforms and industry standards."}
           </h2>
 
-          <p className="mt-5 text-base md:text-lg text-[#000823]/70 font-normal leading-relaxed">
+          <p className="mt-3.5 text-sm sm:text-base text-[#000823]/70 font-normal leading-relaxed">
             {isAr
               ? "نعمل عبر أبرز منصات الإبداع، الحوسبة السحابية، البرمجيات، الأمان، والبنية التحتية لتقديم حلول مناسبة لبيئة عمل كل عميل."
               : "We work across leading creative, cloud, software, security and infrastructure platforms to deliver solutions suited to each client environment."}
@@ -118,14 +118,14 @@ export function HomePartners() {
         </div>
 
         {/* ── Category Filter Tabs ──────────────────────────────────────── */}
-        <div className="flex flex-wrap gap-2 pb-6 mb-8 border-b border-[#000823]/[0.08]">
+        <div className="flex flex-wrap gap-2 pb-5 mb-7 border-b border-[#000823]/[0.08]">
           {CATEGORIES.map((cat) => (
             <button
               key={cat.id}
               onClick={() => setActiveTab(cat.id)}
-              className={`px-4 py-2 rounded-xl text-xs font-semibold tracking-wider transition-all duration-200 cursor-pointer ${activeTab === cat.id
-                ? "bg-[#000823] text-white shadow-xs"
-                : "bg-[#F8F8F8] text-[#000823]/70 hover:text-[#000823] hover:bg-[#000823]/[0.05]"
+              className={`px-3.5 sm:px-4 py-2 rounded-xl text-xs font-semibold tracking-wider transition-all duration-200 cursor-pointer hover:scale-[1.02] active:scale-[0.98] ${activeTab === cat.id
+                ? "bg-[#000823] text-white shadow-sm"
+                : "bg-[#F8F8F8] text-[#000823]/70 hover:text-[#000823] hover:bg-[#000823]/[0.06]"
                 }`}
             >
               {isAr ? cat.nameAr : cat.name}
@@ -135,7 +135,7 @@ export function HomePartners() {
 
         {/* ── Active Category Ecosystem Cards ───────────────────────────── */}
         <div>
-          <div className="flex items-center justify-between mb-6">
+          <div className="flex items-center justify-between mb-5">
             <span className="text-[11px] font-mono uppercase tracking-widest text-[#000823]/50 font-bold">
               {isAr ? currentCategory.labelAr : currentCategory.label}
             </span>
@@ -144,11 +144,11 @@ export function HomePartners() {
             </span>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3.5 sm:gap-4">
             {currentCategory.items.map((item, idx) => (
               <div
                 key={idx}
-                className="p-5 rounded-2xl bg-[#F8F8F8] border border-[#000823]/[0.06] hover:border-[#000823]/25 hover:bg-white hover:shadow-md transition-all duration-200 group flex flex-col justify-between"
+                className="p-4 sm:p-5 rounded-2xl bg-[#F8F8F8] border border-[#000823]/[0.06] hover:border-[#000823]/25 hover:bg-white hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-out group flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between gap-1 mb-2">

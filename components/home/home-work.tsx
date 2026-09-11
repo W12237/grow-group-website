@@ -13,20 +13,20 @@ export function HomeWork() {
   const featuredCases = CASE_STUDIES_DATA.slice(0, 3)
 
   return (
-    <section id="work" className="py-24 md:py-32 px-6 md:px-12 lg:px-20 bg-white border-b border-[#000823]/[0.08]">
+    <section id="work" className="py-16 sm:py-20 md:py-28 px-4 sm:px-6 md:px-12 lg:px-20 bg-white border-b border-[#000823]/[0.08]">
       <div className="max-w-6xl mx-auto">
         {/* ── Section Header ────────────────────────────────────────────── */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 md:mb-20">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 md:mb-16">
           <div className="max-w-3xl">
             <SectionLabel>
               {isAr ? "أعمال ومشاريع مختارة" : "Featured Work"}
             </SectionLabel>
 
-            <h2 className="mt-4 text-3xl md:text-5xl font-bold tracking-tight text-[#000823] leading-[1.1]">
+            <h2 className="mt-3 text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#000823] leading-[1.15]">
               {isAr ? "مشاريع واقعية وتحديات تشغيلية حقيقية." : "Real engagements. Measurable business outcomes."}
             </h2>
 
-            <p className="mt-5 text-base md:text-lg text-[#000823]/70 font-normal leading-relaxed">
+            <p className="mt-3.5 text-sm sm:text-base text-[#000823]/70 font-normal leading-relaxed">
               {isAr
                 ? "دراسات حالة حقيقية مستندة إلى نطاقات عمل منجزة عبر قطاعات المجموعة، موثقة بالصناعة، التحدي، الحل، والنتائج القابلة للتحقق."
                 : "A selection of delivered client engagements across retail, logistics, and enterprise finance, documenting real challenges and technical solutions."}
@@ -35,19 +35,19 @@ export function HomeWork() {
 
           <Link
             href="/work"
-            className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#000823] hover:underline font-mono shrink-0"
+            className="group inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#000823] hover:opacity-85 font-mono shrink-0 transition-opacity"
           >
             <span>{isAr ? "عرض جميع دراسات الحالة" : "View All Case Studies"}</span>
-            <span>→</span>
+            <span className="transition-transform duration-200 group-hover:translate-x-1 rtl:group-hover:-translate-x-1">→</span>
           </Link>
         </div>
 
         {/* ── Grid of Featured Work ─────────────────────────────────────── */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
           {featuredCases.map((cs) => (
             <div
               key={cs.id}
-              className="flex flex-col justify-between p-7 rounded-2xl bg-[#F8F8F8] border border-[#000823]/[0.08] hover:border-[#000823]/20 hover:shadow-md transition-all duration-300"
+              className="group flex flex-col justify-between p-5 sm:p-6 md:p-6.5 rounded-2xl bg-[#F8F8F8] border border-[#000823]/[0.08] hover:border-[#000823]/25 hover:-translate-y-1.5 hover:shadow-xl transition-all duration-300 ease-out"
             >
               <div>
                 {/* Sector & Industry Header */}

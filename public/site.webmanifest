@@ -1,0 +1,26 @@
+{
+  "name": "Growl Co. — One Group. Five Engines of Growth.",
+  "short_name": "Growl Co.",
+  "description": "Growl brings technology, intelligence, security, systems, brand, and product execution together.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000823",
+  "theme_color": "#000823",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

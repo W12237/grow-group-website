@@ -40,10 +40,10 @@ export function CTASection({
               <SectionLabel>{label}</SectionLabel>
             </div>
           )}
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-tight leading-[1.1] mb-6 text-[#000823]">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight leading-[1.18] mb-4 text-[#000823]">
             {headline}
           </h2>
-          <p className="text-[15px] text-[#000823]/60 leading-relaxed mb-10 max-w-xl mx-auto font-normal">
+          <p className="text-sm sm:text-base text-[#525866] leading-relaxed mb-8 max-w-xl mx-auto font-normal">
             {description}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">

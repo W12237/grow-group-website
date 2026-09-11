@@ -22,8 +22,8 @@ const CAPABILITIES: CapabilityItem[] = [
     number: "01",
     name: "Brand Identity Systems",
     nameAr: "أنظمة الهوية البصرية والعلامات",
-    explanation: "Comprehensive design tokens, typography frames, and brand guidelines engineered to scale cleanly across digital and physical touchpoints.",
-    explanationAr: "محددات تصميمية شاملة، قوالب بصرية وأدلة هوية معيارية مُهندسة للتوسع عبر كافة القنوات الرقمية والمطبوعة.",
+    explanation: "Modular design tokens, typography systems, and brand guidelines engineered for scale.",
+    explanationAr: "محددات تصميمية شاملة وقوالب بصرية معيارية مُهندسة للتوسع عبر كافة القنوات.",
     sectorName: "Marketing & Branding",
     sectorNameAr: "التسويق وبناء العلامات",
     sectorColor: "#E5389A",
@@ -33,8 +33,8 @@ const CAPABILITIES: CapabilityItem[] = [
     number: "02",
     name: "Campaigns & Media Production",
     nameAr: "الحملات التسويقية والإنتاج الإعلامي",
-    explanation: "Multi-channel advertising campaigns, studio-grade video production, and high-performance media buying with measurable attribution.",
-    explanationAr: "حملات إعلانية متعددة القنوات، إنتاج مرئي بمواصفات سينمائية، وإدارة إعلانية ترتكز على قياس العائد الدقيق.",
+    explanation: "Studio-grade media production, creative direction, and attribution-driven media buying.",
+    explanationAr: "إنتاج مرئي بمواصفات سينمائية، إدارة إعلانية ترتكز على قياس العائد الدقيق.",
     sectorName: "Marketing & Branding",
     sectorNameAr: "التسويق وبناء العلامات",
     sectorColor: "#E5389A",
@@ -44,8 +44,8 @@ const CAPABILITIES: CapabilityItem[] = [
     number: "03",
     name: "Web & Mobile Platforms",
     nameAr: "منصات الويب وتطبيقات الهواتف",
-    explanation: "Bespoke high-traffic web applications, native iOS and Android experiences, and robust API architectures designed around real operational loads.",
-    explanationAr: "تطبيقات ويب مخصصة للأحمال العالية، تطبيقات أصلية للهواتف الذكية، وهياكل برمجية واجهات API مصممة للتشغيل الحي.",
+    explanation: "High-traffic web platforms, native iOS/Android apps, and resilient API architectures.",
+    explanationAr: "تطبيقات ويب مخصصة للأحمال العالية، وتطبيقات أصلية للهواتف الذكية مع هياكل API متينة.",
     sectorName: "Tech",
     sectorNameAr: "التقنية والبرمجيات",
     sectorColor: "#FF7A00",
@@ -55,8 +55,8 @@ const CAPABILITIES: CapabilityItem[] = [
     number: "04",
     name: "ERP, CRM, POS & Management Systems",
     nameAr: "أنظمة إدارة الأعمال ERP وCRM ونقاط البيع",
-    explanation: "Custom enterprise resource planning, automated sales pipelines, and multi-location retail/restaurant point-of-sale platforms.",
-    explanationAr: "تخطيط الموارد المؤسسية المخصص، أتمتة مسارات المبيعات، ومنصات نقاط البيع للمتاجر والمطاعم متعددة الفروع.",
+    explanation: "Custom enterprise planning, automated sales pipelines, and multi-location retail POS.",
+    explanationAr: "تخطيط الموارد المؤسسية، أتمتة مسارات المبيعات، ومنصات نقاط البيع متعددة الفروع.",
     sectorName: "Tech & Hub",
     sectorNameAr: "التقنية والأنظمة السحابية",
     sectorColor: "#FF7A00",
@@ -66,8 +66,8 @@ const CAPABILITIES: CapabilityItem[] = [
     number: "05",
     name: "AI Workflow Automation",
     nameAr: "أتمتة المسارات بالذكاء الاصطناعي",
-    explanation: "Production-grade n8n orchestrations connecting legacy databases, messaging, finance, and CRM without human data re-entry.",
-    explanationAr: "أتمتة شاملة لمسارات العمل عبر n8n لربط قواعد البيانات، الرسائل، والمبيعات دون الحاجة لإدخال يدوي للبيانات.",
+    explanation: "Production n8n orchestrations connecting databases, messaging, and finance seamlessly.",
+    explanationAr: "أتمتة مسارات العمل لربط قواعد البيانات، الرسائل، والمبيعات دون إدخال يدوي.",
     sectorName: "AI",
     sectorNameAr: "الذكاء الاصطناعي",
     sectorColor: "#0FCFC0",
@@ -77,8 +77,8 @@ const CAPABILITIES: CapabilityItem[] = [
     number: "06",
     name: "Private Agentic AI & RAG",
     nameAr: "الوكلاء المستقلون والذكاء الاصطناعي الخاص",
-    explanation: "Self-hosted retrieval pipelines and autonomous task execution systems running strictly on internal tenant infrastructure.",
-    explanationAr: "أنظمة استرجاع مستندات خاصة (RAG) ووكلاء مهام مستقلون يعملون بالكامل داخل البنية التحتية الخاصة بالعميل.",
+    explanation: "Self-hosted RAG pipelines and autonomous agent squads running on tenant infrastructure.",
+    explanationAr: "أنظمة استرجاع مستندات خاصة (RAG) ووكلاء مهام مستقلون داخل البنية الخاصة بالعميل.",
     sectorName: "AI",
     sectorNameAr: "الذكاء الاصطناعي",
     sectorColor: "#0FCFC0",
@@ -88,8 +88,8 @@ const CAPABILITIES: CapabilityItem[] = [
     number: "07",
     name: "Cybersecurity & Enterprise Networking",
     nameAr: "الأمن السيبراني والشبكات المؤسسية",
-    explanation: "Certified Fortinet firewall fabrics, zero-trust network access (ZTNA), enterprise switching, and continuous threat mitigation.",
-    explanationAr: "جدران حماية معتمدة من فورتينت، شبكات انعدام الثقة (ZTNA)، شبكات مؤسسية وتدابير استباقية للتهديدات.",
+    explanation: "Certified Fortinet firewalls, Zero Trust (ZTNA), enterprise switching, and threat defense.",
+    explanationAr: "جدران حماية معتمدة من فورتينت، شبكات انعدام الثقة (ZTNA)، وتدابير أمنية استباقية.",
     sectorName: "System Integrator & Cybersecurity",
     sectorNameAr: "تكامل الأنظمة والأمن السيبراني",
     sectorColor: "#DA291C",
@@ -99,8 +99,8 @@ const CAPABILITIES: CapabilityItem[] = [
     number: "08",
     name: "Data-Centre Infrastructure & Subscription Hub",
     nameAr: "مراكز البيانات والمنتجات السحابية الجاهزة",
-    explanation: "On-premise virtualization, disaster recovery clusters, and subscription-based SaaS suites without prolonged implementation cycles.",
-    explanationAr: "افتراضية مراكز البيانات المحلية، خطط التعافي من الكوارث، وباقات البرمجيات السحابية الفورية دون استنزاف زمني.",
+    explanation: "Virtualization, disaster recovery clusters, and turnkey software platforms.",
+    explanationAr: "افتراضية مراكز البيانات، خطط التعافي من الكوارث، وباقات البرمجيات الفورية.",
     sectorName: "SI, Cybersecurity & Hub",
     sectorNameAr: "الأمن السيبراني والأنظمة السحابية",
     sectorColor: "#1F6FEB",
@@ -112,19 +112,19 @@ export function HomeCapabilities() {
   const { isAr } = useLanguage()
 
   return (
-    <section className="py-24 md:py-32 px-6 md:px-12 lg:px-20 bg-[#F8F8F8] border-b border-[#000823]/[0.08]">
+    <section className="py-16 sm:py-20 md:py-28 px-4 sm:px-6 md:px-12 lg:px-20 bg-[#F8F8F8] border-b border-[#000823]/[0.08]">
       <div className="max-w-6xl mx-auto">
         {/* ── Section Header ────────────────────────────────────────────── */}
-        <div className="max-w-3xl mb-16 md:mb-20">
+        <div className="max-w-3xl mb-12 md:mb-16">
           <SectionLabel>
             {isAr ? "مجالات القدرات والتنفيذ" : "Selected Capabilities"}
           </SectionLabel>
 
-          <h2 className="mt-4 text-3xl md:text-5xl font-bold tracking-tight text-[#000823] leading-[1.1]">
+          <h2 className="mt-3 text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#000823] leading-[1.15]">
             {isAr ? "تنفيذ متكامل عبر الطبقات الحيوية للأعمال." : "Full-spectrum execution across the modern business stack."}
           </h2>
 
-          <p className="mt-5 text-base md:text-lg text-[#000823]/70 font-normal leading-relaxed">
+          <p className="mt-3.5 text-sm sm:text-base text-[#000823]/70 font-normal leading-relaxed">
             {isAr
               ? "مجموعة مختارة من القدرات الأساسية التي تبرز نطاق عمل المجموعة وعمق ممارستها في المشاريع الإقليمية والمؤسسية."
               : "A curated selection of cross-sector competencies demonstrating Growl’s breadth from strategic design to mission-critical infrastructure."}
@@ -132,16 +132,16 @@ export function HomeCapabilities() {
         </div>
 
         {/* ── Structured Editorial Grid (8 entries) ────────────────────── */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
           {CAPABILITIES.map((cap) => (
             <Link
               key={cap.number}
               href={cap.href}
-              className="group relative flex flex-col justify-between p-6 rounded-2xl bg-white border border-[#000823]/[0.08] hover:border-[#000823]/25 hover:shadow-lg transition-all duration-300"
+              className="group relative flex flex-col justify-between p-4.5 sm:p-5 md:p-6 rounded-2xl bg-white border border-[#000823]/[0.08] hover:border-[#000823]/25 hover:-translate-y-1.5 hover:shadow-xl transition-all duration-300 ease-out"
             >
               <div>
                 {/* Top Row: Number and Sector Tag */}
-                <div className="flex items-center justify-between gap-2 mb-4">
+                <div className="flex items-center justify-between gap-2 mb-3">
                   <span className="text-xs font-mono font-bold text-[#000823]/40 group-hover:text-[#000823] transition-colors">
                     {cap.number}
                   </span>
@@ -157,7 +157,7 @@ export function HomeCapabilities() {
                 </div>
 
                 {/* Capability Title */}
-                <h3 className="text-base font-bold text-[#000823] mb-2.5 leading-snug group-hover:text-[#000823] transition-colors">
+                <h3 className="text-sm sm:text-base font-bold text-[#000823] mb-2 leading-snug group-hover:text-[#000823] transition-colors">
                   {isAr ? cap.nameAr : cap.name}
                 </h3>
 
@@ -172,7 +172,7 @@ export function HomeCapabilities() {
                 <span className="font-mono text-[11px] uppercase tracking-wider">
                   {isAr ? "تفاصيل القطاع" : "Sector View"}
                 </span>
-                <span className="font-mono text-sm group-hover:translate-x-1 transition-transform">
+                <span className="font-mono text-sm transition-transform duration-200 group-hover:translate-x-1 rtl:group-hover:-translate-x-1">
                   →
                 </span>
               </div>

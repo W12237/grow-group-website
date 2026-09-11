@@ -52,19 +52,19 @@ export function HomeTeam() {
   const { isAr } = useLanguage()
 
   return (
-    <section id="team" className="py-24 md:py-32 px-6 md:px-12 lg:px-20 bg-[#F8F8F8] border-b border-[#000823]/[0.08]">
+    <section id="team" className="py-16 sm:py-20 md:py-28 px-4 sm:px-6 md:px-12 lg:px-20 bg-[#F8F8F8] border-b border-[#000823]/[0.08]">
       <div className="max-w-6xl mx-auto">
         {/* ── Section Header ────────────────────────────────────────────── */}
-        <div className="max-w-3xl mb-16 md:mb-20">
+        <div className="max-w-3xl mb-12 md:mb-16">
           <SectionLabel>
             {isAr ? "فريق القيادة والتنفيذ" : "Leadership Team"}
           </SectionLabel>
 
-          <h2 className="mt-4 text-3xl md:text-5xl font-bold tracking-tight text-[#000823] leading-[1.1]">
+          <h2 className="mt-3 text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#000823] leading-[1.15]">
             {isAr ? "القيادات المسؤولة عن العمل والنتائج." : "The people responsible for the work."}
           </h2>
 
-          <p className="mt-5 text-base md:text-lg text-[#000823]/70 font-normal leading-relaxed">
+          <p className="mt-3.5 text-sm sm:text-base text-[#000823]/70 font-normal leading-relaxed">
             {isAr
               ? "تُقاد مجموعة جرول بواسطة فريق تنفيذي متكامل يجمع بين قيادة الأعمال، التميز التقني، الانضباط التشغيلي، وضمان أعلى معايير التسليم."
               : "Growl is led by a cross-functional team bringing together business leadership, technology, operations and delivery."}
@@ -76,7 +76,7 @@ export function HomeTeam() {
           {TEAM_MEMBERS.map((member) => (
             <div
               key={member.name}
-              className="group relative flex flex-col justify-between rounded-3xl bg-white border border-[#000823]/[0.08] hover:border-[#000823]/25 overflow-hidden transition-all duration-300 hover:shadow-xl"
+              className="group relative flex flex-col justify-between rounded-3xl bg-white border border-[#000823]/[0.08] hover:border-[#000823]/25 hover:-translate-y-1.5 overflow-hidden transition-all duration-300 ease-out hover:shadow-2xl"
             >
               {/* Subtle top accent line on hover */}
               <div

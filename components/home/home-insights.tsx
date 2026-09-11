@@ -73,20 +73,20 @@ export function HomeInsights() {
   const { isAr } = useLanguage()
 
   return (
-    <section id="insights" className="py-24 md:py-32 px-6 md:px-12 lg:px-20 bg-white border-b border-[#000823]/[0.08]">
+    <section id="insights" className="py-16 sm:py-20 md:py-28 px-4 sm:px-6 md:px-12 lg:px-20 bg-white border-b border-[#000823]/[0.08]">
       <div className="max-w-6xl mx-auto">
         {/* ── Section Header ────────────────────────────────────────────── */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 md:mb-20">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 md:mb-16">
           <div className="max-w-3xl">
             <SectionLabel>
               {isAr ? "الرؤى والبحوث التقنية" : "Insights & Research"}
             </SectionLabel>
 
-            <h2 className="mt-4 text-3xl md:text-5xl font-bold tracking-tight text-[#000823] leading-[1.1]">
+            <h2 className="mt-3 text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#000823] leading-[1.15]">
               {isAr ? "رؤى معمقة في الاستراتيجية، التقنية، والتنفيذ." : "Perspective on strategy, technology, and execution."}
             </h2>
 
-            <p className="mt-5 text-base md:text-lg text-[#000823]/70 font-normal leading-relaxed">
+            <p className="mt-3.5 text-sm sm:text-base text-[#000823]/70 font-normal leading-relaxed">
               {isAr
                 ? "أبحاث وتحليلات دورية ينشرها مهندسو واستراتيجيو قطاعات جرول حول التحولات الواقعية في الذكاء الاصطناعي، الأمن، والهوية."
                 : "Practical publications authored by Growl practice leads on engineering real systems, scalable brand architectures, and enterprise security."}
@@ -95,24 +95,24 @@ export function HomeInsights() {
 
           <Link
             href="/insights"
-            className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#000823] hover:underline font-mono shrink-0"
+            className="group inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#000823] hover:opacity-85 font-mono shrink-0 transition-opacity"
           >
             <span>{isAr ? "عرض أرشيف الرؤى" : "Explore All Insights"}</span>
-            <span>→</span>
+            <span className="transition-transform duration-200 group-hover:translate-x-1 rtl:group-hover:-translate-x-1">→</span>
           </Link>
         </div>
 
         {/* ── 3 Editorial Insight Cards ─────────────────────────────────── */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
           {INSIGHTS.map((item) => (
             <Link
               key={item.id}
               href={item.href}
-              className="group flex flex-col justify-between p-7 rounded-2xl bg-[#F8F8F8] border border-[#000823]/[0.08] hover:border-[#000823]/25 hover:bg-white hover:shadow-lg transition-all duration-300"
+              className="group flex flex-col justify-between p-5 sm:p-6 rounded-2xl bg-[#F8F8F8] border border-[#000823]/[0.08] hover:border-[#000823]/25 hover:bg-white hover:-translate-y-1.5 hover:shadow-xl transition-all duration-300 ease-out"
             >
               <div>
                 {/* Meta Header */}
-                <div className="flex items-center justify-between gap-2 pb-4 mb-4 border-b border-[#000823]/[0.06]">
+                <div className="flex items-center justify-between gap-2 pb-3 mb-3.5 border-b border-[#000823]/[0.06]">
                   <span
                     className="text-[10px] font-mono font-bold px-2 py-0.5 rounded"
                     style={{
@@ -129,24 +129,24 @@ export function HomeInsights() {
                 </div>
 
                 {/* Article Title */}
-                <h3 className="text-lg font-bold text-[#000823] mb-3 leading-snug group-hover:text-[#000823] transition-colors">
+                <h3 className="text-base sm:text-lg font-bold text-[#000823] mb-2.5 leading-snug group-hover:text-[#000823] transition-colors">
                   {isAr ? item.titleAr : item.title}
                 </h3>
 
                 {/* Introduction */}
-                <p className="text-xs text-[#000823]/65 leading-relaxed font-normal">
+                <p className="text-xs text-[#000823]/65 leading-relaxed font-normal line-clamp-3">
                   {isAr ? item.introAr : item.intro}
                 </p>
               </div>
 
               {/* Card Footer: Date & Link */}
-              <div className="mt-8 pt-4 border-t border-[#000823]/[0.06] flex items-center justify-between text-xs font-semibold text-[#000823]/60 group-hover:text-[#000823] transition-colors">
+              <div className="mt-6 pt-3.5 border-t border-[#000823]/[0.06] flex items-center justify-between text-xs font-semibold text-[#000823]/60 group-hover:text-[#000823] transition-colors">
                 <span className="font-mono text-[11px] text-[#000823]/40">
                   {isAr ? item.dateAr : item.date}
                 </span>
-                <span className="font-mono flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                <span className="font-mono flex items-center gap-1">
                   <span>{isAr ? "قراءة المقال" : "Read Article"}</span>
-                  <span>→</span>
+                  <span className="transition-transform duration-200 group-hover:translate-x-1 rtl:group-hover:-translate-x-1">→</span>
                 </span>
               </div>
             </Link>

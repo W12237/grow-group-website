@@ -142,23 +142,31 @@ export default function InsightsPage() {
       <SiteHeader />
 
       {/* Hero */}
-      <section className="pt-36 pb-20 px-6 md:px-12 lg:px-20 border-b border-[#000823]/[0.06]">
+      <section className="pt-32 pb-14 sm:pt-36 sm:pb-18 md:pt-40 md:pb-20 px-5 sm:px-6 md:px-12 lg:px-20 border-b border-[#000823]/[0.08] bg-white">
         <div className="max-w-6xl mx-auto">
           <RevealOnScroll>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#000823]/10 bg-white text-[#000823]/70 text-[11px] font-mono tracking-widest uppercase mb-6 shadow-xs">
-              <span className="w-2 h-2 rounded-full bg-[#000823]" />
-              <span>{isAr ? "الرؤى والتحليلات الفكرية" : "EXECUTIVE INSIGHTS & ENGINEERING PAPERS"}</span>
+            <div className="flex items-center gap-2 mb-4">
+              <span className="w-2 h-2 rounded-full bg-[#7135E5]" />
+              <SectionLabel>{isAr ? "الرؤى والتحليلات الفكرية" : "EXECUTIVE INSIGHTS & ENGINEERING PAPERS"}</SectionLabel>
             </div>
 
-            <h1 className="text-[clamp(2.5rem,6vw,5rem)] font-light tracking-tight leading-[1.05] mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] xl:text-[3.5rem] font-bold tracking-tight leading-[1.12] mb-5 text-[#000823] max-w-3xl">
               {isAr ? (
-                <>رؤى وأبحاث هندسية متقدمة<br />من خبراء مجموعة GROWL.</>
+                <>
+                  رؤى وأبحاث هندسية متقدمة
+                  <br />
+                  من خبراء وممارسي مجموعة جرول.
+                </>
               ) : (
-                <>Strategic thinking & engineering papers<br />from across the Growl group.</>
+                <>
+                  Strategic thinking & engineering papers
+                  <br />
+                  from across the Growl group.
+                </>
               )}
             </h1>
 
-            <p className="text-[16px] text-[#000823]/65 leading-relaxed max-w-2xl font-normal">
+            <p className="text-base sm:text-lg text-[#525866] leading-[1.6] max-w-2xl font-normal">
               {isAr
                 ? "مقالات وتحليلات استراتيجية حول الذكاء الاصطناعي، وهندسة البرمجيات، والأمن السيبراني، وتكامل البيانات المؤسسية، واستوديو منتجات SaaS يقدمها المهندسون والاستشاريون التنفيذيون في المجموعة."
                 : "Deep technical perspectives on artificial intelligence, software architecture, cybersecurity hardening, and product scaling from the specialists delivering mission-critical outcomes every day."}

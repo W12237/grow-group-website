@@ -105,20 +105,20 @@ export default function ContactPage() {
       <section className="pt-36 pb-16 px-6 md:px-12 lg:px-20 border-b border-[#000823]/[0.06]">
         <div className="max-w-6xl mx-auto">
           <RevealOnScroll>
-            <div className="flex items-center gap-3 mb-6">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#000823]" />
+            <div className="flex items-center gap-2 mb-4">
+              <span className="w-2 h-2 rounded-full bg-[#7135E5]" />
               <SectionLabel>{isAr ? "التواصل والاستفسار التنفيذي" : "EXECUTIVE ENGAGEMENT"}</SectionLabel>
             </div>
-            <h1 className="text-[clamp(2.5rem,6vw,4.5rem)] font-light tracking-tight leading-[1.05] mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] xl:text-[3.5rem] font-bold tracking-tight leading-[1.12] mb-5 text-[#000823] max-w-3xl">
               {isAr ? (
                 <>ابدأ محادثة استراتيجية<br />حول مشروعك القادم.</>
               ) : (
                 <>Start an executive conversation.<br />Engineer what matters.</>
               )}
             </h1>
-            <p className="text-[16px] text-[#000823]/65 leading-relaxed max-w-2xl font-normal">
+            <p className="text-base sm:text-lg text-[#525866] leading-[1.6] max-w-2xl font-normal mb-8">
               {isAr
-                ? "أخبرنا بما تخطط لبنائه، أو أتمتته، أو ربطه، أو حمايته، أو توسيعه. سنقوم بحشد أفضل الكفاءات المتخصصة من قطاعات GROWL الخمسة لخدمة أهدافك."
+                ? "أخبرنا بما تخطط لبنائه، أو أتمتته، أو ربطه، أو حمايته، أو توسيعه. سنقوم بحشد أفضل الكفاءات المتخصصة من قطاعات جرول الخمسة لخدمة أهدافك."
                 : "Tell us what you are building, automating, integrating, securing, or scaling. We will assemble the exact senior multidisciplinary capabilities across Growl Co. around your opportunity."}
             </p>
           </RevealOnScroll>

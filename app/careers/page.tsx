@@ -118,22 +118,30 @@ export default function CareersPage() {
       <section className="pt-36 pb-20 px-6 md:px-12 lg:px-20 border-b border-[#000823]/[0.06]">
         <div className="max-w-6xl mx-auto">
           <RevealOnScroll>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#000823]/10 bg-white text-[#000823]/70 text-[11px] font-mono tracking-widest uppercase mb-6 shadow-xs">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span>{isAr ? "انضم إلى فريق النخبة في GROWL" : "JOIN GROWL CO. HOLDING GROUP"}</span>
+            <div className="flex items-center gap-2 mb-4">
+              <span className="w-2 h-2 rounded-full bg-[#7135E5]" />
+              <SectionLabel>{isAr ? "انضم إلى فريق النخبة" : "CAREERS AT GROWL"}</SectionLabel>
             </div>
 
-            <h1 className="text-[clamp(2.5rem,6vw,5rem)] font-light tracking-tight leading-[1.05] mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] xl:text-[3.5rem] font-bold tracking-tight leading-[1.12] mb-5 text-[#000823] max-w-3xl">
               {isAr ? (
-                <>اصنع أثراً حقيقياً<br />عبر خمسة تخصصات تقنية كبرى.</>
+                <>
+                  اصنع أثراً حقيقياً
+                  <br />
+                  عبر خمسة تخصصات تقنية رائدة.
+                </>
               ) : (
-                <>Build meaningful engineering<br />across five disciplines.</>
+                <>
+                  Build meaningful engineering
+                  <br />
+                  across five specialist disciplines.
+                </>
               )}
             </h1>
 
-            <p className="text-[16px] text-[#000823]/65 leading-relaxed max-w-2xl font-normal">
+            <p className="text-base sm:text-lg text-[#525866] leading-[1.6] max-w-2xl font-normal">
               {isAr
-                ? "تجمع GROWL نخبة المهندسين والمبتكرين في مجالات الذكاء الاصطناعي، وهندسة البرمجيات، والأمن السيبراني، وتكامل الأنظمة، والتسويق القائم على الأداء. إذا كنت تبحث عن بيئة تقدر الجودة العالية، وتتحدى الروتين، وتصنع منتجات عالمية — مكانك معنا."
+                ? "تجمع جرول نخبة المهندسين والمبتكرين في مجالات الذكاء الاصطناعي، وهندسة البرمجيات، والأمن السيبراني، وتكامل الأنظمة، والتسويق القائم على الأداء. إذا كنت تبحث عن بيئة تقدر الجودة العالية، وتتحدى الروتين، وتصنع منتجات عالمية — مكانك معنا."
                 : "Growl unites exceptional engineers, strategists, and builders. If you thrive on high-stakes technical challenges and share our commitment to uncompromising craftsmanship — explore our open positions."}
             </p>
           </RevealOnScroll>
@@ -141,11 +149,11 @@ export default function CareersPage() {
       </section>
 
       {/* Culture Values */}
-      <section className="py-24 px-6 md:px-12 lg:px-20 border-b border-[#000823]/[0.06] bg-white">
+      <section className="py-16 sm:py-20 md:py-24 px-5 sm:px-6 md:px-12 lg:px-20 border-b border-[#000823]/[0.08] bg-white">
         <div className="max-w-6xl mx-auto">
-          <RevealOnScroll className="mb-14">
+          <RevealOnScroll className="mb-12">
             <SectionLabel>{isAr ? "ثقافة العمل وقيمنا" : "ENGINEERING CULTURE & VALUES"}</SectionLabel>
-            <h2 className="mt-5 text-3xl md:text-4xl font-light tracking-tight leading-[1.1]">
+            <h2 className="mt-3 text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#000823] leading-[1.18]">
               {isAr ? "بيئة عمل مبنية على التميز والمسؤولية." : "How we build, collaborate, and evolve."}
             </h2>
           </RevealOnScroll>

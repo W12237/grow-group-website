@@ -31,27 +31,40 @@ export default function PartnersEcosystemPage() {
       <SiteHeader />
 
       {/* ── Page Hero ──────────────────────────────────────────────────── */}
-      <section className="pt-36 pb-20 md:pt-44 md:pb-24 px-6 md:px-12 lg:px-20 border-b border-[#000823]/[0.08] bg-white relative overflow-hidden">
+      <section className="pt-32 pb-14 sm:pt-36 sm:pb-18 md:pt-40 md:pb-20 px-5 sm:px-6 md:px-12 lg:px-20 border-b border-[#000823]/[0.08] bg-white relative overflow-hidden">
         <div className="max-w-6xl mx-auto">
-          <SectionLabel>{isAr ? "المنظومة والشركاء" : "TECHNOLOGY ECOSYSTEM"}</SectionLabel>
+          <div className="flex items-center gap-2 mb-4">
+            <span className="w-2 h-2 rounded-full bg-[#7135E5]" />
+            <SectionLabel>{isAr ? "المنظومة والشركاء" : "TECHNOLOGY ECOSYSTEM"}</SectionLabel>
+          </div>
 
-          <h1 className="mt-4 text-[clamp(2.4rem,5.5vw,4.8rem)] font-bold tracking-tight leading-[1.08] mb-6 text-[#000823] max-w-4xl">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] xl:text-[3.5rem] font-bold tracking-tight leading-[1.12] mb-5 text-[#000823] max-w-3xl">
             {isAr ? (
-              <>المنظومة التقنية والمنصات.<br />بناء مؤسسي على ركائز عالمية موثوقة.</>
+              <>
+                المنظومة التقنية والمنصات.
+                <br />
+                بناء مؤسسي على ركائز عالمية موثوقة.
+              </>
             ) : (
-              <>Technology Ecosystem & Platforms.<br />Engineered on Vetted Global Foundations.</>
+              <>
+                Technology Ecosystem & Platforms.
+                <br />
+                Engineered on Vetted Global Foundations.
+              </>
             )}
           </h1>
 
-          <p className="text-[17px] md:text-[19px] text-[#000823]/70 leading-relaxed max-w-3xl font-normal mb-8">
+          <p className="text-base sm:text-lg text-[#525866] leading-[1.6] max-w-2xl font-normal mb-7">
             {isAr
               ? "نصمم، نبني، وننفذ حلولنا البرمجية والأمنية والتسويقية بالاعتماد على أرقى المنصات العالمية. توفر هذه الصفحة دليلاً شاملاً للمنظومات والتقنيات المدعومة عبر قطاعاتنا الخمسة."
               : "We design, integrate, and deploy across premier global technology suites, cloud environments, and enterprise platforms. This directory indexes the complete technology ecosystem supported across our five specialized sectors."}
           </p>
 
           {/* Transparency Credibility Notice */}
-          <div className="p-5 rounded-2xl bg-[#F8F8F8] border border-[#000823]/[0.08] max-w-3xl text-xs text-[#000823]/60 leading-relaxed font-mono">
-            <strong>{isAr ? "إشعار الامتثال والمعايير:" : "Governance & Credibility Standard:"}</strong>{" "}
+          <div className="p-4 sm:p-5 rounded-2xl bg-[#F8F8F8] border border-[#000823]/[0.08] max-w-2xl text-xs sm:text-[13px] text-[#525866] leading-relaxed">
+            <span className="font-semibold text-[#000823]">
+              {isAr ? "إشعار الامتثال والمعايير: " : "Governance & Credibility Standard: "}
+            </span>
             {isAr
               ? "تمثل العلامات والأسماء التجارية المدرجة أدناه تقنيات ومنصات وبيئات عمل تدعمها وتتكامل معها مجموعة جرول في مشاريع عملائها. لا تُعرض شارات الشراكة والاعتماد الرسمي إلا عند وجود توثيق تعاقدي رسمي سارٍ."
               : "Platform names and logos represent technologies, cloud environments, and integrations actively designed and deployed by Growl. Formal vendor partnerships and certification badges are displayed strictly when verified under active legal agreements."}

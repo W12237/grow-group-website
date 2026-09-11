@@ -47,19 +47,19 @@ export function HomeDelivery() {
   const { isAr } = useLanguage()
 
   return (
-    <section className="py-24 md:py-32 px-6 md:px-12 lg:px-20 bg-[#F8F8F8] border-b border-[#000823]/[0.08]">
+    <section className="py-16 sm:py-20 md:py-28 px-4 sm:px-6 md:px-12 lg:px-20 bg-[#F8F8F8] border-b border-[#000823]/[0.08]">
       <div className="max-w-6xl mx-auto">
         {/* ── Section Header ────────────────────────────────────────────── */}
-        <div className="max-w-3xl mb-16 md:mb-20">
+        <div className="max-w-3xl mb-12 md:mb-16">
           <SectionLabel>
             {isAr ? "منهجية العمل والتسليم" : "Delivery Approach"}
           </SectionLabel>
 
-          <h2 className="mt-4 text-3xl md:text-5xl font-bold tracking-tight text-[#000823] leading-[1.1]">
+          <h2 className="mt-3 text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#000823] leading-[1.15]">
             {isAr ? "مسار منضبط ومباشر من الفكرة إلى التشغيل." : "A disciplined path from inquiry to operation."}
           </h2>
 
-          <p className="mt-5 text-base md:text-lg text-[#000823]/70 font-normal leading-relaxed">
+          <p className="mt-3.5 text-sm sm:text-base text-[#000823]/70 font-normal leading-relaxed">
             {isAr
               ? "منهجية واضحة ومباشرة تخلو من المصطلحات المعقدة غير المفهومة، وتضمن وضوح المسؤوليات وتوقيتات التسليم في كل مرحلة."
               : "A transparent, structured four-phase delivery framework ensuring clarity of milestones, deliverables, and accountability across every sector."}
@@ -67,16 +67,16 @@ export function HomeDelivery() {
         </div>
 
         {/* ── 4-Stage Process Grid ──────────────────────────────────────── */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
           {STAGES.map((stage) => (
             <div
               key={stage.number}
-              className="relative p-7 rounded-2xl bg-white border border-[#000823]/[0.08] hover:border-[#000823]/25 transition-all duration-300 flex flex-col justify-between group"
+              className="relative p-5 sm:p-6 rounded-2xl bg-white border border-[#000823]/[0.08] hover:border-[#000823]/25 hover:-translate-y-1.5 hover:shadow-xl transition-all duration-300 ease-out flex flex-col justify-between group"
             >
               <div>
                 {/* Step Marker */}
-                <div className="flex items-center justify-between mb-6 pb-4 border-b border-[#000823]/[0.06]">
-                  <span className="w-10 h-10 rounded-xl bg-[#000823]/[0.04] border border-[#000823]/10 flex items-center justify-center font-mono text-sm font-bold text-[#000823] group-hover:bg-[#000823] group-hover:text-white transition-colors">
+                <div className="flex items-center justify-between mb-5 pb-3.5 border-b border-[#000823]/[0.06]">
+                  <span className="w-9 h-9 rounded-xl bg-[#000823]/[0.04] border border-[#000823]/10 flex items-center justify-center font-mono text-xs font-bold text-[#000823] group-hover:bg-[#000823] group-hover:text-white transition-colors duration-200">
                     {stage.number}
                   </span>
                   <span className="text-[10px] font-mono uppercase tracking-widest text-[#000823]/40">
@@ -85,7 +85,7 @@ export function HomeDelivery() {
                 </div>
 
                 {/* Stage Name */}
-                <h3 className="text-xl font-bold text-[#000823] mb-4">
+                <h3 className="text-base sm:text-lg font-bold text-[#000823] mb-3">
                   {isAr ? stage.nameAr : stage.name}
                 </h3>
 

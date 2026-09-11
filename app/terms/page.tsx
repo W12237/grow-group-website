@@ -21,7 +21,7 @@ export default function TermsPage() {
           <p className="text-[10px] font-mono tracking-[0.2em] uppercase text-[#000823]/40 mb-3 font-semibold">
             {isAr ? "الشروط والاتفاقيات التجارية" : "LEGAL & TERMS OF ENGAGEMENT"}
           </p>
-          <h1 className="text-3xl md:text-4xl font-light tracking-tight mb-3">
+          <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-[#000823] mb-3">
             {isAr ? "الشروط والأحكام العامة" : "Terms & Conditions of Service"}
           </h1>
           <p className="text-xs font-mono text-[#000823]/40 mb-10">
